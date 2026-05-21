@@ -1,0 +1,1802 @@
+[
+  {
+    "id": 1,
+    "question": "What happens if BFS starts in a disconnected graph?",
+    "options": [
+      "Only reachable vertices are visited",
+      "Entire graph is visited",
+      "Graph becomes cyclic",
+      "Traversal stops instantly"
+    ],
+    "answer": "Only reachable vertices are visited",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 2,
+    "question": "In computer networks, routers mainly use which concept?",
+    "options": [
+      "Shortest Path",
+      "Stack Traversal",
+      "Binary Tree",
+      "Heap Rotation"
+    ],
+    "answer": "Shortest Path",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 3,
+    "question": "What does MST stand for in graph algorithms?",
+    "options": [
+      "Minimum Spanning Tree",
+      "Maximum Search Tree",
+      "Multi Source Tree",
+      "Minimum Sorting Technique"
+    ],
+    "answer": "Minimum Spanning Tree",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 4,
+    "question": "When implementing DFS using an explicit stack, what operation is performed first?",
+    "options": [
+      "Delete a vertex",
+      "Push the source vertex onto the stack",
+      "Sort all vertices",
+      "Remove edges from the graph"
+    ],
+    "answer": "Push the source vertex onto the stack",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 5,
+    "question": "At the beginning of a Single-Source Shortest Path algorithm, the distances of all vertices except the source are initialized to:",
+    "options": [
+      "0",
+      "1",
+      "Infinity",
+      "Negative value"
+    ],
+    "answer": "Infinity",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 6,
+    "question": "The Single-Source Shortest Path problem determines the shortest distance from:",
+    "options": [
+      "Every vertex to every other vertex",
+      "One specified source vertex to all other vertices",
+      "Only adjacent vertices",
+      "The destination to the source"
+    ],
+    "answer": "One specified source vertex to all other vertices",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 7,
+    "question": "Which structure is preferred for sparse graphs?",
+    "options": [
+      "Adjacency List",
+      "Adjacency Matrix",
+      "Array",
+      "Matrix Chain"
+    ],
+    "answer": "Adjacency List",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 8,
+    "question": "Which graph traversal uses backtracking?",
+    "options": [
+      "DFS",
+      "BFS",
+      "Dijkstra",
+      "Prim"
+    ],
+    "answer": "DFS",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 9,
+    "question": "Which of the following is not used for graph traversal?",
+    "options": [
+      "Breadth First Search (BFS)",
+      "Depth First Search (DFS)",
+      "Binary Search",
+      "Level Order Traversal"
+    ],
+    "answer": "Binary Search",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 10,
+    "question": "If a graph is disconnected, what should be done in DFS to ensure every vertex is visited?",
+    "options": [
+      "Use only one starting vertex",
+      "Ignore isolated vertices",
+      "Perform DFS for all unvisited vertices",
+      "Convert the graph into a tree"
+    ],
+    "answer": "Perform DFS for all unvisited vertices",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 11,
+    "question": "What is the expanded form of DFS?",
+    "options": [
+      "Directed File System",
+      "Data Flow Search",
+      "Depth First Search",
+      "Dynamic Function Search"
+    ],
+    "answer": "Depth First Search",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 12,
+    "question": "In an adjacency list representation, each vertex maintains:",
+    "options": [
+      "A matrix of all vertices",
+      "A list of its neighboring vertices",
+      "Only the edge weights",
+      "A stack of vertices"
+    ],
+    "answer": "A list of its neighboring vertices",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 13,
+    "question": "What happens if BFS is applied to a disconnected graph starting from a single source vertex?",
+    "options": [
+      "All vertices are visited automatically",
+      "Only vertices reachable from the source are visited",
+      "The graph becomes connected",
+      "BFS changes into DFS"
+    ],
+    "answer": "Only vertices reachable from the source are visited",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 14,
+    "question": "What is the minimum number of edges required to connect n vertices in a tree?",
+    "options": [
+      "n-1",
+      "n",
+      "n+1",
+      "2n"
+    ],
+    "answer": "n-1",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 15,
+    "question": "Which graph traversal technique is best suited for finding the shortest path in an unweighted graph?",
+    "options": [
+      "DFS",
+      "BFS",
+      "Topological Sort",
+      "Dijkstra’s Algorithm"
+    ],
+    "answer": "BFS",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 16,
+    "question": "Which algorithm uses relaxation while computing shortest paths?",
+    "options": [
+      "Dijkstra’s Algorithm",
+      "Prim’s Algorithm",
+      "DFS",
+      "Topological Sort"
+    ],
+    "answer": "Dijkstra’s Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 17,
+    "question": "In Prim’s Algorithm, the next selected edge must:",
+    "options": [
+      "Have minimum weight",
+      "Form a cycle",
+      "Be random",
+      "Have maximum weight"
+    ],
+    "answer": "Have minimum weight",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 18,
+    "question": "A graph has vertices 1, 2, 3, and 4 with edges 1-2, 1-3, 2-4, and 3-4. Starting BFS from vertex 1, which order is correct?",
+    "options": [
+      "1, 2, 3, 4",
+      "1, 3, 2, 4",
+      "1, 4, 2, 3",
+      "1, 2, 4, 3"
+    ],
+    "answer": "1, 2, 3, 4",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 19,
+    "question": "Which graph type contains edges with associated costs or values?",
+    "options": [
+      "Weighted Graph",
+      "Null Graph",
+      "Cyclic Graph",
+      "Regular Graph"
+    ],
+    "answer": "Weighted Graph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 20,
+    "question": "Which statement correctly distinguishes BFS from DFS?",
+    "options": [
+      "BFS uses recursion while DFS uses queues",
+      "BFS explores level by level, whereas DFS explores depth-wise",
+      "BFS works only on trees",
+      "DFS cannot traverse graphs"
+    ],
+    "answer": "BFS explores level by level, whereas DFS explores depth-wise",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 21,
+    "question": "Given vertices A, B, and C with edges A-B = 2, B-C = 3, and A-C = 5, if the process begins at A, which edge will Prim’s Algorithm pick first?",
+    "options": [
+      "A-C = 5",
+      "B-C = 3",
+      "A-B = 2",
+      "None of the above"
+    ],
+    "answer": "A-B = 2",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 22,
+    "question": "What happens if topological sorting is attempted on a graph containing a cycle?",
+    "options": [
+      "A valid ordering is produced",
+      "The graph becomes disconnected",
+      "Topological sorting is not possible",
+      "The cycle is automatically removed"
+    ],
+    "answer": "Topological sorting is not possible",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 23,
+    "question": "What does the Single-Source Shortest Path problem involve?",
+    "options": [
+      "Finding the longest route in a graph",
+      "Determining shortest paths from one source vertex to all others",
+      "Connecting all vertices with equal weights",
+      "Detecting disconnected components"
+    ],
+    "answer": "Determining shortest paths from one source vertex to all others",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 24,
+    "question": "What occurs when a shorter route to a vertex is discovered during execution of a shortest path algorithm?",
+    "options": [
+      "The vertex is removed",
+      "The distance value is updated",
+      "The graph becomes cyclic",
+      "The algorithm restarts"
+    ],
+    "answer": "The distance value is updated",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 25,
+    "question": "In Dijkstra’s shortest path procedure, what is the name of the step where adjacent node distances are recalculated and improved?",
+    "options": [
+      "Relaxation",
+      "Traversal",
+      "Rotation",
+      "Balancing"
+    ],
+    "answer": "Relaxation",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 26,
+    "question": "Which algorithm is frequently used by GPS applications to determine the shortest travel route?",
+    "options": [
+      "Merge Sort",
+      "Prim’s Algorithm",
+      "Dijkstra’s Algorithm",
+      "Binary Search"
+    ],
+    "answer": "Dijkstra’s Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 27,
+    "question": "Which of the following is true regarding a Directed Acyclic Graph (DAG)?",
+    "options": [
+      "It always contains loops",
+      "It has no cycles",
+      "It must be disconnected",
+      "It contains equal edge weights only"
+    ],
+    "answer": "It has no cycles",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 28,
+    "question": "Breadth First Search explores graph vertices in which order?",
+    "options": [
+      "Depth-wise",
+      "Random order",
+      "Level by level",
+      "Reverse order"
+    ],
+    "answer": "Level by level",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 29,
+    "question": "Dijkstra’s Algorithm produces correct results only when the graph contains:",
+    "options": [
+      "Negative edge weights",
+      "Non-negative edge weights",
+      "Cyclic edges only",
+      "Unweighted edges only"
+    ],
+    "answer": "Non-negative edge weights",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 30,
+    "question": "Which graph structure is best for representing routes between cities?",
+    "options": [
+      "Weighted Graph",
+      "Null Graph",
+      "Tree only",
+      "Stack"
+    ],
+    "answer": "Weighted Graph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 31,
+    "question": "Suppose a graph contains edges A-B=1, A-C=4, B-C=2, B-D=5, and C-D=1. Starting from A, what is the minimum distance to reach D?",
+    "options": [
+      "6",
+      "4",
+      "5",
+      "3"
+    ],
+    "answer": "3",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 32,
+    "question": "Which algorithm can detect cycles using recursion stack technique?",
+    "options": [
+      "DFS",
+      "BFS",
+      "Prim’s Algorithm",
+      "Dijkstra’s Algorithm"
+    ],
+    "answer": "DFS",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 33,
+    "question": "Which of the following is a common application of Depth First Search (DFS)?",
+    "options": [
+      "Finding shortest path in weighted graph",
+      "Cycle detection in graphs",
+      "Sorting arrays",
+      "Memory allocation"
+    ],
+    "answer": "Cycle detection in graphs",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 34,
+    "question": "A graph containing no edges is called:",
+    "options": [
+      "Null Graph",
+      "Complete Graph",
+      "Directed Graph",
+      "Cyclic Graph"
+    ],
+    "answer": "Null Graph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 35,
+    "question": "Which statement correctly explains topological ordering in graphs?",
+    "options": [
+      "It arranges vertices so that dependencies are satisfied",
+      "It always forms a cycle",
+      "It is applicable to weighted graphs only",
+      "It connects every vertex directly"
+    ],
+    "answer": "It arranges vertices so that dependencies are satisfied",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 36,
+    "question": "Given edges A-B=5, A-C=3, and C-B=1, what is the shortest distance from A to B using Dijkstra’s approach?",
+    "options": [
+      "5",
+      "3",
+      "4",
+      "6"
+    ],
+    "answer": "4",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 37,
+    "question": "How do navigation applications make use of graph structures?",
+    "options": [
+      "By sorting all roads alphabetically",
+      "By modeling locations as vertices and roads as edges",
+      "By storing only city names",
+      "By converting roads into arrays"
+    ],
+    "answer": "By modeling locations as vertices and roads as edges",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 38,
+    "question": "Which algorithm is widely used for scheduling tasks with dependencies?",
+    "options": [
+      "Binary Search",
+      "Topological Sorting",
+      "Merge Sort",
+      "Prim’s Algorithm"
+    ],
+    "answer": "Topological Sorting",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 39,
+    "question": "A graph that has at least one cycle is known as:",
+    "options": [
+      "Complete Graph",
+      "Cyclic Graph",
+      "Bipartite Graph",
+      "Sparse Graph"
+    ],
+    "answer": "Cyclic Graph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 40,
+    "question": "In a weighted graph, the adjacency matrix stores:",
+    "options": [
+      "Only 0 and 1 values",
+      "Vertex labels",
+      "Edge weights",
+      "Degree of vertices"
+    ],
+    "answer": "Edge weights",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 41,
+    "question": "What does a queue follow in BFS?",
+    "options": [
+      "FIFO principle",
+      "LIFO principle",
+      "Random order",
+      "Recursive order"
+    ],
+    "answer": "FIFO principle",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 42,
+    "question": "What is the full form of DAG in graph theory?",
+    "options": [
+      "Directed Acyclic Graph",
+      "Dynamic Access Graph",
+      "Double Arrow Graph",
+      "Directed Access Grid"
+    ],
+    "answer": "Directed Acyclic Graph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 43,
+    "question": "Which graph traversal explores neighboring vertices before deeper ones?",
+    "options": [
+      "BFS",
+      "DFS",
+      "Dijkstra",
+      "Prim"
+    ],
+    "answer": "BFS",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 44,
+    "question": "In BFS, vertices are explored in:",
+    "options": [
+      "Level order",
+      "Random order",
+      "Reverse order",
+      "Weighted order"
+    ],
+    "answer": "Level order",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 45,
+    "question": "A cycle in a graph means:",
+    "options": [
+      "Returning to the same vertex",
+      "Visiting all vertices once",
+      "Disconnecting vertices",
+      "Removing edges"
+    ],
+    "answer": "Returning to the same vertex",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 46,
+    "question": "Which graph model is used in social networking applications?",
+    "options": [
+      "Vertices and edges",
+      "Arrays only",
+      "Stacks only",
+      "Binary trees"
+    ],
+    "answer": "Vertices and edges",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 47,
+    "question": "In Single-Source Shortest Path algorithms, the distance assigned to the source vertex at the start is:",
+    "options": [
+      "Infinity",
+      "-1",
+      "0",
+      "1"
+    ],
+    "answer": "0",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 48,
+    "question": "Which traversal approach is generally used to compute the shortest path in an unweighted graph?",
+    "options": [
+      "DFS",
+      "BFS",
+      "Prim’s Algorithm",
+      "Topological Sort"
+    ],
+    "answer": "BFS",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 49,
+    "question": "Which of the following is considered a drawback of Dijkstra’s Algorithm?",
+    "options": [
+      "It cannot process directed graphs",
+      "It fails with graphs having negative edge weights",
+      "It requires recursion",
+      "It works only on trees"
+    ],
+    "answer": "It fails with graphs having negative edge weights",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 50,
+    "question": "What is the highest possible number of edges in a simple undirected graph with n vertices?",
+    "options": [
+      "n(n-1)",
+      "n(n-1)/2",
+      "n^2",
+      "n+1"
+    ],
+    "answer": "n(n-1)/2",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 51,
+    "question": "Which graph representation is generally preferred for dense graphs?",
+    "options": [
+      "Linked List",
+      "Adjacency List",
+      "Adjacency Matrix",
+      "Queue Representation"
+    ],
+    "answer": "Adjacency Matrix",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 52,
+    "question": "How many edges are present in a Minimum Spanning Tree containing n vertices?",
+    "options": [
+      "n",
+      "n-1",
+      "n+1",
+      "2n"
+    ],
+    "answer": "n-1",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 53,
+    "question": "Which graph algorithm can help minimize cable installation cost?",
+    "options": [
+      "Prim’s Algorithm",
+      "DFS",
+      "BFS",
+      "Linear Search"
+    ],
+    "answer": "Prim’s Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 54,
+    "question": "In graph representation, an adjacency matrix stores information using:",
+    "options": [
+      "Two-dimensional arrays",
+      "Linked lists",
+      "Queues",
+      "Trees"
+    ],
+    "answer": "Two-dimensional arrays",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 55,
+    "question": "What is the role of vertices in road network graphs?",
+    "options": [
+      "Represent locations",
+      "Represent roads",
+      "Represent weights",
+      "Represent cycles"
+    ],
+    "answer": "Represent locations",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 56,
+    "question": "A directed graph is also commonly called:",
+    "options": [
+      "Tree",
+      "Digraph",
+      "Network Graph",
+      "Linear Graph"
+    ],
+    "answer": "Digraph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 57,
+    "question": "What is the complexity advantage of adjacency lists?",
+    "options": [
+      "Efficient for sparse graphs",
+      "Faster sorting",
+      "Reduced recursion",
+      "Infinite storage"
+    ],
+    "answer": "Efficient for sparse graphs",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 58,
+    "question": "During a DFS traversal, which node is visited first?",
+    "options": [
+      "The node with highest degree",
+      "The middle node",
+      "The starting/source node",
+      "The last inserted node"
+    ],
+    "answer": "The starting/source node",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 59,
+    "question": "Which type of graph is commonly used to represent task scheduling problems?",
+    "options": [
+      "Directed Acyclic Graph (DAG)",
+      "Complete Graph",
+      "Cyclic Graph",
+      "Bipartite Graph"
+    ],
+    "answer": "Directed Acyclic Graph (DAG)",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 60,
+    "question": "In BFS traversal, when is a vertex usually marked as visited?",
+    "options": [
+      "After removing it from the queue",
+      "Before traversal begins",
+      "When it is inserted into the queue",
+      "After all vertices are visited"
+    ],
+    "answer": "When it is inserted into the queue",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 61,
+    "question": "What is the purpose of relaxation in shortest path algorithms?",
+    "options": [
+      "Updating smaller distances",
+      "Removing cycles",
+      "Adding vertices",
+      "Sorting edges"
+    ],
+    "answer": "Updating smaller distances",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 62,
+    "question": "In an adjacency matrix, what does the value 1 at position [i][j] indicate?",
+    "options": [
+      "No connection exists",
+      "Vertex is isolated",
+      "An edge exists between vertices i and j",
+      "Graph contains a cycle"
+    ],
+    "answer": "An edge exists between vertices i and j",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 63,
+    "question": "In recursive DFS, what occurs when a vertex has no unvisited adjacent vertices?",
+    "options": [
+      "The traversal stops immediately",
+      "The algorithm moves to a random node",
+      "The recursion backtracks to the previous vertex",
+      "The graph gets disconnected"
+    ],
+    "answer": "The recursion backtracks to the previous vertex",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 64,
+    "question": "Which algorithm repeatedly selects the minimum weighted edge to build an MST?",
+    "options": [
+      "Prim’s Algorithm",
+      "DFS",
+      "BFS",
+      "Binary Search"
+    ],
+    "answer": "Prim’s Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 65,
+    "question": "Which data structure is mainly used to implement BFS?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Array"
+    ],
+    "answer": "Queue",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 66,
+    "question": "Which graph algorithm is widely used in GPS navigation systems?",
+    "options": [
+      "Dijkstra’s Algorithm",
+      "DFS",
+      "BFS",
+      "Prim’s Algorithm"
+    ],
+    "answer": "Dijkstra’s Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 67,
+    "question": "Suppose a graph has edges A-B = 4, A-C = 2, and C-B = 1. What is the shortest distance from A to B?",
+    "options": [
+      "4",
+      "3",
+      "2",
+      "5"
+    ],
+    "answer": "3",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 68,
+    "question": "Which algorithm is commonly used for dependency scheduling?",
+    "options": [
+      "Topological Sort",
+      "Bubble Sort",
+      "Merge Sort",
+      "BFS"
+    ],
+    "answer": "Topological Sort",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 69,
+    "question": "In BFS traversal, what does it indicate when the queue becomes empty?",
+    "options": [
+      "The graph contains cycles",
+      "All reachable vertices have been visited",
+      "The source vertex is removed",
+      "The graph is disconnected"
+    ],
+    "answer": "All reachable vertices have been visited",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 70,
+    "question": "Which traversal technique explores a graph by moving as deep as possible before backtracking?",
+    "options": [
+      "Depth First Search",
+      "Breadth First Search",
+      "Binary Search",
+      "Linear Search"
+    ],
+    "answer": "Depth First Search",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 71,
+    "question": "In task scheduling systems, when can a task begin execution?",
+    "options": [
+      "Immediately after creation",
+      "Only after all dependent tasks are completed",
+      "Before dependencies are assigned",
+      "After visiting all graph vertices"
+    ],
+    "answer": "Only after all dependent tasks are completed",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 72,
+    "question": "Which graph representation usually consumes more memory regardless of edge count?",
+    "options": [
+      "Adjacency List",
+      "Edge List",
+      "Adjacency Matrix",
+      "Linked Representation"
+    ],
+    "answer": "Adjacency Matrix",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 73,
+    "question": "Which of the following algorithms can be used to find a Minimum Spanning Tree?",
+    "options": [
+      "Prim’s Algorithm",
+      "Linear Search",
+      "Binary Search",
+      "Depth First Search"
+    ],
+    "answer": "Prim’s Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 74,
+    "question": "In a directed graph, edges have:",
+    "options": [
+      "Direction",
+      "Colors",
+      "Levels",
+      "Heights"
+    ],
+    "answer": "Direction",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 75,
+    "question": "What is the maximum number of edges in a simple undirected graph with n vertices?",
+    "options": [
+      "n(n-1)/2",
+      "n^2",
+      "n",
+      "2n"
+    ],
+    "answer": "n(n-1)/2",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 76,
+    "question": "Which shortest path algorithm repeatedly selects the nearest unvisited vertex?",
+    "options": [
+      "Dijkstra’s Algorithm",
+      "BFS",
+      "DFS",
+      "Prim’s Algorithm"
+    ],
+    "answer": "Dijkstra’s Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 77,
+    "question": "In adjacency matrices, absence of an edge is usually represented by:",
+    "options": [
+      "0",
+      "1",
+      "Infinity",
+      "-5"
+    ],
+    "answer": "0",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 78,
+    "question": "A graph that does not contain any cycle is called:",
+    "options": [
+      "Complete Graph",
+      "Cyclic Graph",
+      "Acyclic Graph",
+      "Weighted Graph"
+    ],
+    "answer": "Acyclic Graph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 79,
+    "question": "Which graph algorithm constructs a spanning tree without cycles?",
+    "options": [
+      "Prim’s Algorithm",
+      "DFS",
+      "BFS",
+      "Selection Sort"
+    ],
+    "answer": "Prim’s Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 80,
+    "question": "The minimum number of edges required to keep all vertices connected is determined in:",
+    "options": [
+      "Breadth First Search",
+      "Minimum Spanning Tree",
+      "Binary Tree",
+      "Directed Graph"
+    ],
+    "answer": "Minimum Spanning Tree",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 81,
+    "question": "In topological sorting, which type of vertex generally appears first?",
+    "options": [
+      "Vertex with highest out-degree",
+      "Vertex with no incoming edges",
+      "Vertex with maximum weight",
+      "Vertex with no outgoing edges"
+    ],
+    "answer": "Vertex with no incoming edges",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 82,
+    "question": "Which data structure supports DFS traversal most naturally?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Heap"
+    ],
+    "answer": "Stack",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 83,
+    "question": "When applying Prim’s method to construct a spanning tree, the process begins from:",
+    "options": [
+      "Any chosen vertex",
+      "The edge with maximum weight",
+      "The isolated vertex only",
+      "The last vertex in the graph"
+    ],
+    "answer": "Any chosen vertex",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 84,
+    "question": "A graph with self-loops removed is called:",
+    "options": [
+      "Simple Graph",
+      "Complete Graph",
+      "Cyclic Graph",
+      "Dense Graph"
+    ],
+    "answer": "Simple Graph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 85,
+    "question": "Which shortest path algorithm fails when negative edge weights are present?",
+    "options": [
+      "Dijkstra’s Algorithm",
+      "BFS",
+      "DFS",
+      "Prim’s Algorithm"
+    ],
+    "answer": "Dijkstra’s Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 86,
+    "question": "Which algorithm is widely used to identify cycles in a graph by utilizing recursion or a recursion stack?",
+    "options": [
+      "Depth First Search (DFS)",
+      "Breadth First Search (BFS)",
+      "Binary Search",
+      "Linear Search"
+    ],
+    "answer": "Depth First Search (DFS)",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 87,
+    "question": "Which traversal algorithm is ideal for finding shortest paths in unweighted graphs?",
+    "options": [
+      "BFS",
+      "DFS",
+      "Prim’s Algorithm",
+      "Kruskal’s Algorithm"
+    ],
+    "answer": "BFS",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 88,
+    "question": "Which algorithm is commonly used to solve the Single-Source Shortest Path problem?",
+    "options": [
+      "Dijkstra’s Algorithm",
+      "Selection Sort",
+      "Prim’s Algorithm",
+      "Kruskal’s Algorithm"
+    ],
+    "answer": "Dijkstra’s Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 89,
+    "question": "Which graph traversal technique explores all neighboring vertices before moving deeper?",
+    "options": [
+      "Depth First Search",
+      "Breadth First Search",
+      "Prim’s Algorithm",
+      "Kruskal’s Algorithm"
+    ],
+    "answer": "Breadth First Search",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 90,
+    "question": "A graph where every pair of vertices is directly connected is called:",
+    "options": [
+      "Sparse Graph",
+      "Complete Graph",
+      "Directed Graph",
+      "Null Graph"
+    ],
+    "answer": "Complete Graph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 91,
+    "question": "Which data structure helps optimize the execution of Dijkstra’s Algorithm?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Priority Queue",
+      "Linked List"
+    ],
+    "answer": "Priority Queue",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 92,
+    "question": "Which data structure is mainly used in Kahn’s algorithm for topological sorting?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Heap",
+      "Tree"
+    ],
+    "answer": "Queue",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 93,
+    "question": "Which of the following is a practical application of Minimum Spanning Trees?",
+    "options": [
+      "Designing network cables with minimum cost",
+      "Sorting arrays",
+      "Database indexing",
+      "Text compression"
+    ],
+    "answer": "Designing network cables with minimum cost",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 94,
+    "question": "Which algorithm is suitable for creating low-cost communication networks?",
+    "options": [
+      "Minimum Spanning Tree",
+      "DFS",
+      "BFS",
+      "Binary Search"
+    ],
+    "answer": "Minimum Spanning Tree",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 95,
+    "question": "For a graph containing 5 vertices, how many edges will appear in its Minimum Spanning Tree?",
+    "options": [
+      "5",
+      "6",
+      "4",
+      "3"
+    ],
+    "answer": "4",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 96,
+    "question": "Topological sorting can be performed only on which type of graph?",
+    "options": [
+      "Undirected Graph",
+      "Complete Graph",
+      "Directed Acyclic Graph (DAG)",
+      "Weighted Graph"
+    ],
+    "answer": "Directed Acyclic Graph (DAG)",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 97,
+    "question": "Which graph-related idea is commonly used in computer networks to identify the most efficient route?",
+    "options": [
+      "Shortest Path Algorithm",
+      "Heap Sort",
+      "Binary Tree Traversal",
+      "Matrix Rotation"
+    ],
+    "answer": "Shortest Path Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 98,
+    "question": "At initialization in Dijkstra’s Algorithm, what distance value is assigned to all unvisited vertices?",
+    "options": [
+      "0",
+      "-1",
+      "Infinity",
+      "Their edge weights"
+    ],
+    "answer": "Infinity",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 99,
+    "question": "What is the primary application of Dijkstra’s Algorithm?",
+    "options": [
+      "Building a spanning tree",
+      "Detecting cycles",
+      "Finding shortest paths from a source vertex",
+      "Sorting graph edges"
+    ],
+    "answer": "Finding shortest paths from a source vertex",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 100,
+    "question": "A spanning tree for n vertices contains how many vertices?",
+    "options": [
+      "n",
+      "n-1",
+      "n+1",
+      "2n"
+    ],
+    "answer": "n",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 101,
+    "question": "A graph in which every vertex is directly connected to every other vertex is called:",
+    "options": [
+      "Connected Graph",
+      "Cyclic Graph",
+      "Complete Graph",
+      "Regular Graph"
+    ],
+    "answer": "Complete Graph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 102,
+    "question": "In graph theory, a graph without any cycles is referred to as:",
+    "options": [
+      "Cyclic Graph",
+      "Complete Graph",
+      "Acyclic Graph",
+      "Weighted Graph"
+    ],
+    "answer": "Acyclic Graph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 103,
+    "question": "In an adjacency list, the neighbors of a vertex are stored as:",
+    "options": [
+      "Arrays of weights",
+      "Linked lists or dynamic lists",
+      "Matrices",
+      "Binary trees"
+    ],
+    "answer": "Linked lists or dynamic lists",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 104,
+    "question": "What is the degree of a vertex in an undirected graph?",
+    "options": [
+      "Number of incident edges",
+      "Number of vertices",
+      "Number of cycles",
+      "Number of paths"
+    ],
+    "answer": "Number of incident edges",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 105,
+    "question": "Which of the following is a key property of a Minimum Spanning Tree?",
+    "options": [
+      "It contains cycles",
+      "It connects all vertices with minimum total edge weight",
+      "It always has directed edges",
+      "It requires equal edge weights"
+    ],
+    "answer": "It connects all vertices with minimum total edge weight",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 106,
+    "question": "Breadth First Search traversal follows which technique?",
+    "options": [
+      "Stack-based traversal",
+      "Recursive traversal",
+      "Queue-based traversal",
+      "Divide and conquer"
+    ],
+    "answer": "Queue-based traversal",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 107,
+    "question": "What is the first vertex distance initialized in Dijkstra’s Algorithm?",
+    "options": [
+      "0",
+      "Infinity",
+      "-1",
+      "1"
+    ],
+    "answer": "0",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 108,
+    "question": "Which of the following is a real-life use case of graph routing algorithms?",
+    "options": [
+      "Social media photo editing",
+      "Internet packet routing",
+      "Word processing",
+      "Audio compression"
+    ],
+    "answer": "Internet packet routing",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 109,
+    "question": "Within map-based navigation systems, roads are usually modeled as:",
+    "options": [
+      "Vertices",
+      "Edges",
+      "Trees",
+      "Cycles"
+    ],
+    "answer": "Edges",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 110,
+    "question": "At every stage of Prim’s Algorithm, which edge is chosen?",
+    "options": [
+      "Edge with the largest weight",
+      "Random edge from the graph",
+      "Minimum-weight edge connecting visited and unvisited vertices",
+      "Edge forming a cycle"
+    ],
+    "answer": "Minimum-weight edge connecting visited and unvisited vertices",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 111,
+    "question": "In a simple directed graph having n vertices and no self-loops, what is the maximum possible number of edges?",
+    "options": [
+      "n(n-1)",
+      "n(n-1)/2",
+      "n^2",
+      "2n"
+    ],
+    "answer": "n(n-1)",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 112,
+    "question": "A graph containing at least one isolated vertex (degree 0) is known as:",
+    "options": [
+      "Connected Graph",
+      "Null Graph",
+      "Disconnected Graph",
+      "Complete Graph"
+    ],
+    "answer": "Disconnected Graph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 113,
+    "question": "A Directed Acyclic Graph is abbreviated as:",
+    "options": [
+      "DAG",
+      "DFG",
+      "DST",
+      "DGT"
+    ],
+    "answer": "DAG",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 114,
+    "question": "In an undirected graph, the degree of a vertex represents:",
+    "options": [
+      "Number of vertices connected indirectly",
+      "Number of edges incident on the vertex",
+      "Total number of cycles",
+      "Number of components in the graph"
+    ],
+    "answer": "Number of edges incident on the vertex",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 115,
+    "question": "Which algorithm is commonly applied to perform topological sorting?",
+    "options": [
+      "Dijkstra’s Algorithm",
+      "Kahn’s Algorithm",
+      "Floyd Warshall Algorithm",
+      "Bellman Ford Algorithm"
+    ],
+    "answer": "Kahn’s Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 116,
+    "question": "Which graph algorithm guarantees minimum connection cost?",
+    "options": [
+      "MST",
+      "DFS",
+      "BFS",
+      "Topological Sort"
+    ],
+    "answer": "MST",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 117,
+    "question": "Which data structure is frequently utilized in Prim’s Algorithm to efficiently choose the smallest weighted edge?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Priority Queue",
+      "Linked List"
+    ],
+    "answer": "Priority Queue",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 118,
+    "question": "Which type of graph is mandatory for topological sorting?",
+    "options": [
+      "Directed Acyclic Graph",
+      "Undirected Graph",
+      "Complete Graph",
+      "Weighted Graph"
+    ],
+    "answer": "Directed Acyclic Graph",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 119,
+    "question": "While running Prim’s Algorithm, what happens if two candidate edges have identical minimum weights?",
+    "options": [
+      "Both edges are rejected",
+      "Any one of them may be selected",
+      "The algorithm stops immediately",
+      "The graph becomes disconnected"
+    ],
+    "answer": "Any one of them may be selected",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 120,
+    "question": "In DFS recursion, what happens after all neighbors are visited?",
+    "options": [
+      "Backtracking occurs",
+      "Graph resets",
+      "Queue becomes empty",
+      "Sorting begins"
+    ],
+    "answer": "Backtracking occurs",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 121,
+    "question": "Which of the following tasks can commonly be solved using DFS?",
+    "options": [
+      "Cycle Detection",
+      "Matrix Multiplication",
+      "Bubble Sorting",
+      "Binary Addition"
+    ],
+    "answer": "Cycle Detection",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 122,
+    "question": "A graph is made up of a collection of vertices and:",
+    "options": [
+      "Arrays",
+      "Edges",
+      "Trees",
+      "Paths"
+    ],
+    "answer": "Edges",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 123,
+    "question": "A graph contains edges 1-2, 1-3, and 2-4. If DFS starts from vertex 1, which vertex is typically explored immediately after 1?",
+    "options": [
+      "4",
+      "2",
+      "3",
+      "None of these"
+    ],
+    "answer": "2",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 124,
+    "question": "In Breadth First Search, which vertex is visited immediately after the source vertex?",
+    "options": [
+      "The deepest vertex",
+      "One of the adjacent vertices of the source",
+      "The last inserted vertex",
+      "A random vertex"
+    ],
+    "answer": "One of the adjacent vertices of the source",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 125,
+    "question": "How does Prim’s Algorithm gradually form the Minimum Spanning Tree?",
+    "options": [
+      "By removing all cycles",
+      "By adding one minimum-weight edge at a time",
+      "By sorting vertices alphabetically",
+      "By connecting random vertices"
+    ],
+    "answer": "By adding one minimum-weight edge at a time",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 126,
+    "question": "After choosing edge A-B = 2 in the previous graph, which edge will be selected next?",
+    "options": [
+      "A-C = 5",
+      "B-C = 3",
+      "A-B = 2 again",
+      "No edge is selected"
+    ],
+    "answer": "B-C = 3",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 127,
+    "question": "In Prim’s algorithm, how many edges will the final Minimum Spanning Tree contain for a graph with n vertices?",
+    "options": [
+      "n",
+      "n-1",
+      "2n",
+      "n+1"
+    ],
+    "answer": "n-1",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 128,
+    "question": "In a weighted connected graph, what does the MST guarantee?",
+    "options": [
+      "Maximum edge weight",
+      "Minimum total connection cost",
+      "Shortest path between every pair of vertices",
+      "Equal distribution of edges"
+    ],
+    "answer": "Minimum total connection cost",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 129,
+    "question": "Which of the following is a practical application of BFS?",
+    "options": [
+      "Social network friend suggestions",
+      "Image compression",
+      "Database encryption",
+      "Compiler optimization"
+    ],
+    "answer": "Social network friend suggestions",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 130,
+    "question": "Which algorithm is unsuitable for graphs with negative cycles?",
+    "options": [
+      "Dijkstra’s Algorithm",
+      "BFS",
+      "DFS",
+      "Prim’s Algorithm"
+    ],
+    "answer": "Dijkstra’s Algorithm",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 131,
+    "question": "When Dijkstra’s Algorithm begins, what distance value is assigned to the starting vertex?",
+    "options": [
+      "Infinity",
+      "0",
+      "1",
+      "Maximum value"
+    ],
+    "answer": "0",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 132,
+    "question": "Which traversal can be implemented recursively with ease?",
+    "options": [
+      "DFS",
+      "BFS",
+      "Prim’s Algorithm",
+      "Kruskal’s Algorithm"
+    ],
+    "answer": "DFS",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 133,
+    "question": "Which graph concept helps in resolving software dependencies?",
+    "options": [
+      "Topological Sorting",
+      "Heap Sort",
+      "Bubble Sort",
+      "BFS"
+    ],
+    "answer": "Topological Sorting",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 134,
+    "question": "Which data structure is primarily used while implementing Depth First Search?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Heap",
+      "Linked Array"
+    ],
+    "answer": "Stack",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 135,
+    "question": "Which graph representation generally consumes more memory for dense graphs?",
+    "options": [
+      "Adjacency Matrix",
+      "Adjacency List",
+      "Stack",
+      "Queue"
+    ],
+    "answer": "Adjacency Matrix",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 136,
+    "question": "During each iteration of Dijkstra’s Algorithm, which vertex is chosen next?",
+    "options": [
+      "The vertex with maximum degree",
+      "The unvisited vertex with the smallest tentative distance",
+      "A random unvisited vertex",
+      "The source vertex repeatedly"
+    ],
+    "answer": "The unvisited vertex with the smallest tentative distance",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 137,
+    "question": "A connected weighted graph has edges A-B=2, A-C=4, B-C=1, B-D=5, C-D=3, C-E=6, and D-E=2. What is the total weight of the Minimum Spanning Tree?",
+    "options": [
+      "10",
+      "8",
+      "12",
+      "9"
+    ],
+    "answer": "8",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 138,
+    "question": "Which statement is true regarding a Minimum Spanning Tree?",
+    "options": [
+      "It always contains cycles",
+      "It connects all vertices without cycles",
+      "It must be directed",
+      "It cannot contain weights"
+    ],
+    "answer": "It connects all vertices without cycles",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 139,
+    "question": "Which data structure is commonly used internally in Breadth First Search?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Heap",
+      "Tree"
+    ],
+    "answer": "Queue",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 140,
+    "question": "Single-Source Shortest Path algorithms are generally applied on:",
+    "options": [
+      "Weighted graphs",
+      "Empty graphs",
+      "Disconnected trees only",
+      "Bipartite graphs only"
+    ],
+    "answer": "Weighted graphs",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 141,
+    "question": "In an adjacency list representation of a directed weighted graph, each list entry contains:",
+    "options": [
+      "Only vertex numbers",
+      "Neighbor vertex and edge weight",
+      "Only edge weights",
+      "Source vertex only"
+    ],
+    "answer": "Neighbor vertex and edge weight",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 142,
+    "question": "What is the full form of MST in graph theory?",
+    "options": [
+      "Maximum Spanning Tree",
+      "Minimum Spanning Tree",
+      "Multiple Source Tree",
+      "Minimum Search Technique"
+    ],
+    "answer": "Minimum Spanning Tree",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 143,
+    "question": "Depth First Search traversal works based on which principle?",
+    "options": [
+      "First In First Out (FIFO)",
+      "Last In First Out (LIFO)",
+      "Random Access",
+      "Circular Traversal"
+    ],
+    "answer": "Last In First Out (LIFO)",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 144,
+    "question": "What is the primary objective of Prim’s Algorithm?",
+    "options": [
+      "To detect cycles in a graph",
+      "To create a minimum-cost spanning tree",
+      "To sort graph vertices",
+      "To calculate graph diameter"
+    ],
+    "answer": "To create a minimum-cost spanning tree",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 145,
+    "question": "What is true about Single-Source Shortest Path problems when a graph contains negative weight cycles?",
+    "options": [
+      "Shortest paths become undefined",
+      "The graph converts into a tree",
+      "Distances remain constant",
+      "All edges become positive"
+    ],
+    "answer": "Shortest paths become undefined",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 146,
+    "question": "Which statement best explains dependency resolution using topological sorting?",
+    "options": [
+      "Tasks are processed in random order",
+      "Independent tasks are executed before dependent tasks",
+      "Cycles are added to the graph",
+      "Vertices are sorted by weight"
+    ],
+    "answer": "Independent tasks are executed before dependent tasks",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 147,
+    "question": "In the adjacency matrix of an unweighted graph, what value indicates that no edge exists between two vertices?",
+    "options": [
+      "1",
+      "-1",
+      "0",
+      "Infinity"
+    ],
+    "answer": "0",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 148,
+    "question": "Which of the following is NOT a graph traversal technique?",
+    "options": [
+      "DFS",
+      "BFS",
+      "Binary Search",
+      "Level Order Traversal"
+    ],
+    "answer": "Binary Search",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 149,
+    "question": "In network analysis, how are systems and their interconnections generally represented?",
+    "options": [
+      "Arrays",
+      "Graphs",
+      "Queues",
+      "Stacks"
+    ],
+    "answer": "Graphs",
+    "explanation": "Refer to class notes for explanation."
+  },
+  {
+    "id": 150,
+    "question": "In dependency resolution, what occurs if circular dependencies are present?",
+    "options": [
+      "Tasks execute normally",
+      "Dependencies are ignored",
+      "Scheduling cannot be completed successfully",
+      "The graph becomes weighted"
+    ],
+    "answer": "Scheduling cannot be completed successfully",
+    "explanation": "Refer to class notes for explanation."
+  }
+]

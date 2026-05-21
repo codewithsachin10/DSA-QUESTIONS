@@ -1,0 +1,87 @@
+
+
+--- page-1 copy.jpg ---
+
+Graph MCQ Practice Set - Answer Key
+r+ 1s 0]
+re 0s 0]
+0s Aa]
+ET TE ET -
+re 0s 0]
+I EE RE
+TE YE
+0» 0s 0]
+0» 0 e¢ ]
+I EE
+rw 1s 0]
+I EY SE
+I" EE ET -
+I 2 EE
+I" ET -
+0» 0s 0]
+I" EY
+re 5 0]
+
+
+--- page-1.jpg ---
+
+Graph MCQ Practice Set
+1. What happens if BFS starts in a disconnected graph?
+D. Traversal stops instantly
+B. Entire graph is visited
+C. Graph becomes cyclic
+A. Only reachable vertices are visited
+2. In computer networks, routers mainly use which concept?
+D. Heap Rotation
+C. Binary Tree
+B. Stack Traversal
+A. Shortest Path
+3. What does MST stand for in graph algorithms?
+B. Maximum Search Tree
+A. Minimum Spanning Tree
+D. Minimum Sorting Technique
+C. Multi Source Tree
+4. When implementing DFS using an explicit stack, what operation is performed
+first?
+B. Push the source vertex onto the stack
+C. Sort all vertices
+
+
+--- page-10.jpg ---
+
+B.3
+
+D.6
+
+37. How do navigation applications make use of graph structures?
+B. By modeling locations as vertices and roads as edges
+C. By storing only city names
+
+A. By sorting all roads alphabetically
+
+D. By converting roads into arrays
+
+38. Which algorithm is widely used for scheduling tasks with dependencies?
+A. Binary Search
+
+D. Prim’s Algorithm
+
+B. Topological Sorting
+
+C. Merge Sort
+
+39. A graph that has at least one cycle is known as:
+B. Cyclic Graph
+
+A. Complete Graph
+
+C. Bipartite Graph
+
+D. Sparse Graph
+
+40. In a weighted graph, the adjacency matrix stores:
+B. Vertex labels
+
+A. Only 0 and 1 values
+
+C. Edge weights

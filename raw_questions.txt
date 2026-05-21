@@ -1,0 +1,800 @@
+Graph MCQ Practice Set
+1. What happens if BFS starts in a disconnected graph?
+D. Traversal stops instantly
+B. Entire graph is visited
+C. Graph becomes cyclic
+A. Only reachable vertices are visited
+2. In computer networks, routers mainly use which concept?
+D. Heap Rotation
+C. Binary Tree
+B. Stack Traversal
+A. Shortest Path
+3. What does MST stand for in graph algorithms?
+B. Maximum Search Tree
+A. Minimum Spanning Tree
+D. Minimum Sorting Technique
+C. Multi Source Tree
+4. When implementing DFS using an explicit stack, what operation is performed
+first?
+B. Push the source vertex onto the stack
+C. Sort all vertices
+D. Remove edges from the graph
+A. Delete a vertex
+5. At the beginning of a Single-Source Shortest Path algorithm, the distances of all
+vertices except the source are initialized to:
+A. 0
+D. Negative value
+B. 1
+C. Infinity
+6. The Single-Source Shortest Path problem determines the shortest distance from:
+A. Every vertex to every other vertex
+D. The destination to the source
+C. Only adjacent vertices
+B. One specified source vertex to all other vertices
+7. Which structure is preferred for sparse graphs?
+A. Adjacency List
+C. Array
+B. Adjacency Matrix
+D. Matrix Chain
+8. Which graph traversal uses backtracking?
+A. DFS
+B. BFS
+C. Dijkstra
+D. Prim
+9. Which of the following is not used for graph traversal?
+D. Level Order Traversal
+A. Breadth First Search (BFS)
+C. Binary Search
+B. Depth First Search (DFS)
+10. If a graph is disconnected, what should be done in DFS to ensure every vertex is
+visited?
+A. Use only one starting vertex
+B. Ignore isolated vertices
+D. Convert the graph into a tree
+C. Perform DFS for all unvisited vertices
+11. What is the expanded form of DFS?
+C. Depth First Search
+B. Data Flow Search
+D. Dynamic Function Search
+A. Directed File System
+12. In an adjacency list representation, each vertex maintains:
+B. A list of its neighboring vertices
+C. Only the edge weights
+D. A stack of vertices
+A. A matrix of all vertices
+13. What happens if BFS is applied to a disconnected graph starting from a single
+source vertex?
+B. Only vertices reachable from the source are visited
+A. All vertices are visited automatically
+D. BFS changes into DFS
+C. The graph becomes connected
+14. What is the minimum number of edges required to connect n vertices in a tree?
+D. 2n
+B. n
+C. n+1
+A. n-1
+15. Which graph traversal technique is best suited for finding the shortest path in an
+unweighted graph?
+D. Dijkstra’s Algorithm
+C. Topological Sort
+B. BFS
+A. DFS
+16. Which algorithm uses relaxation while computing shortest paths?
+A. Dijkstra’s Algorithm
+D. Topological Sort
+B. Prim’s Algorithm
+C. DFS
+17. In Prim’s Algorithm, the next selected edge must:
+A. Have minimum weight
+D. Have maximum weight
+B. Form a cycle
+C. Be random
+18. A graph has vertices 1, 2, 3, and 4 with edges 1-2, 1-3, 2-4, and 3-4. Starting BFS
+from vertex 1, which order is correct?
+B. 1, 3, 2, 4
+C. 1, 4, 2, 3
+A. 1, 2, 3, 4
+D. 1, 2, 4, 3
+19. Which graph type contains edges with associated costs or values?
+A. Weighted Graph
+D. Regular Graph
+B. Null Graph
+C. Cyclic Graph
+20. Which statement correctly distinguishes BFS from DFS?
+A. BFS uses recursion while DFS uses queues
+D. DFS cannot traverse graphs
+B. BFS explores level by level, whereas DFS explores depth-wise
+C. BFS works only on trees
+21. Given vertices A, B, and C with edges A-B = 2, B-C = 3, and A-C = 5, if the
+process begins at A, which edge will Prim’s Algorithm pick first?
+A. A-C = 5
+C. A-B = 2
+B. B-C = 3
+D. None of the above
+22. What happens if topological sorting is attempted on a graph containing a cycle?
+C. Topological sorting is not possible
+A. A valid ordering is produced
+D. The cycle is automatically removed
+B. The graph becomes disconnected
+23. What does the Single-Source Shortest Path problem involve?
+B. Determining shortest paths from one source vertex to all others
+D. Detecting disconnected components
+C. Connecting all vertices with equal weights
+A. Finding the longest route in a graph
+24. What occurs when a shorter route to a vertex is discovered during execution of a
+shortest path algorithm?
+B. The distance value is updated
+D. The algorithm restarts
+C. The graph becomes cyclic
+A. The vertex is removed
+25. In Dijkstra’s shortest path procedure, what is the name of the step where
+adjacent node distances are recalculated and improved?
+C. Rotation
+A. Relaxation
+D. Balancing
+B. Traversal
+26. Which algorithm is frequently used by GPS applications to determine the
+shortest travel route?
+C. Dijkstra’s Algorithm
+D. Binary Search
+A. Merge Sort
+B. Prim’s Algorithm
+27. Which of the following is true regarding a Directed Acyclic Graph (DAG)?
+A. It always contains loops
+B. It has no cycles
+C. It must be disconnected
+D. It contains equal edge weights only
+28. Breadth First Search explores graph vertices in which order?
+B. Random order
+A. Depth-wise
+C. Level by level
+D. Reverse order
+29. Dijkstra’s Algorithm produces correct results only when the graph contains:
+C. Cyclic edges only
+D. Unweighted edges only
+B. Non-negative edge weights
+A. Negative edge weights
+30. Which graph structure is best for representing routes between cities?
+D. Stack
+A. Weighted Graph
+C. Tree only
+B. Null Graph
+31. Suppose a graph contains edges A-B=1, A-C=4, B-C=2, B-D=5, and C-D=1.
+Starting from A, what is the minimum distance to reach D?
+A. 6
+C. 5
+B. 4
+D. 3
+32. Which algorithm can detect cycles using recursion stack technique?
+C. Prim’s Algorithm
+D. Dijkstra’s Algorithm
+A. DFS
+B. BFS
+33. Which of the following is a common application of Depth First Search (DFS)?
+B. Cycle detection in graphs
+A. Finding shortest path in weighted graph
+D. Memory allocation
+C. Sorting arrays
+34. A graph containing no edges is called:
+B. Complete Graph
+C. Directed Graph
+D. Cyclic Graph
+A. Null Graph
+35. Which statement correctly explains topological ordering in graphs?
+A. It arranges vertices so that dependencies are satisfied
+B. It always forms a cycle
+C. It is applicable to weighted graphs only
+D. It connects every vertex directly
+36. Given edges A-B=5, A-C=3, and C-B=1, what is the shortest distance from A to
+B using Dijkstra’s approach?
+A. 5
+C. 4
+B. 3
+D. 6
+37. How do navigation applications make use of graph structures?
+B. By modeling locations as vertices and roads as edges
+C. By storing only city names
+A. By sorting all roads alphabetically
+D. By converting roads into arrays
+38. Which algorithm is widely used for scheduling tasks with dependencies?
+A. Binary Search
+D. Prim’s Algorithm
+B. Topological Sorting
+C. Merge Sort
+39. A graph that has at least one cycle is known as:
+B. Cyclic Graph
+A. Complete Graph
+C. Bipartite Graph
+D. Sparse Graph
+40. In a weighted graph, the adjacency matrix stores:
+B. Vertex labels
+A. Only 0 and 1 values
+C. Edge weights
+D. Degree of vertices
+41. What does a queue follow in BFS?
+C. Random order
+D. Recursive order
+B. LIFO principle
+A. FIFO principle
+42. What is the full form of DAG in graph theory?
+C. Double Arrow Graph
+D. Directed Access Grid
+A. Directed Acyclic Graph
+B. Dynamic Access Graph
+43. Which graph traversal explores neighboring vertices before deeper ones?
+C. Dijkstra
+A. BFS
+B. DFS
+D. Prim
+44. In BFS, vertices are explored in:
+B. Random order
+C. Reverse order
+D. Weighted order
+A. Level order
+45. A cycle in a graph means:
+B. Visiting all vertices once
+C. Disconnecting vertices
+D. Removing edges
+A. Returning to the same vertex
+46. Which graph model is used in social networking applications?
+A. Vertices and edges
+B. Arrays only
+C. Stacks only
+D. Binary trees
+47. In Single-Source Shortest Path algorithms, the distance assigned to the source
+vertex at the start is:
+A. Infinity
+B. -1
+D. 1
+C. 0
+48. Which traversal approach is generally used to compute the shortest path in an
+unweighted graph?
+A. DFS
+C. Prim’s Algorithm
+B. BFS
+D. Topological Sort
+49. Which of the following is considered a drawback of Dijkstra’s Algorithm?
+D. It works only on trees
+C. It requires recursion
+B. It fails with graphs having negative edge weights
+A. It cannot process directed graphs
+50. What is the highest possible number of edges in a simple undirected graph with
+n vertices?
+D. n+1
+B. n(n-1)/2
+A. n(n-1)
+C. n^2
+51. Which graph representation is generally preferred for dense graphs?
+B. Adjacency List
+C. Adjacency Matrix
+A. Linked List
+D. Queue Representation
+52. How many edges are present in a Minimum Spanning Tree containing n
+vertices?
+A. n
+B. n-1
+D. 2n
+C. n+1
+53. Which graph algorithm can help minimize cable installation cost?
+C. BFS
+B. DFS
+A. Prim’s Algorithm
+D. Linear Search
+54. In graph representation, an adjacency matrix stores information using:
+A. Two-dimensional arrays
+B. Linked lists
+C. Queues
+D. Trees
+55. What is the role of vertices in road network graphs?
+B. Represent roads
+C. Represent weights
+A. Represent locations
+D. Represent cycles
+56. A directed graph is also commonly called:
+C. Network Graph
+D. Linear Graph
+A. Tree
+B. Digraph
+57. What is the complexity advantage of adjacency lists?
+B. Faster sorting
+A. Efficient for sparse graphs
+C. Reduced recursion
+D. Infinite storage
+58. During a DFS traversal, which node is visited first?
+D. The last inserted node
+C. The starting/source node
+A. The node with highest degree
+B. The middle node
+59. Which type of graph is commonly used to represent task scheduling problems?
+A. Directed Acyclic Graph (DAG)
+D. Bipartite Graph
+C. Cyclic Graph
+B. Complete Graph
+60. In BFS traversal, when is a vertex usually marked as visited?
+C. When it is inserted into the queue
+D. After all vertices are visited
+B. Before traversal begins
+A. After removing it from the queue
+61. What is the purpose of relaxation in shortest path algorithms?
+B. Removing cycles
+D. Sorting edges
+C. Adding vertices
+A. Updating smaller distances
+62. In an adjacency matrix, what does the value 1 at position [i][j] indicate?
+C. An edge exists between vertices i and j
+A. No connection exists
+D. Graph contains a cycle
+B. Vertex is isolated
+63. In recursive DFS, what occurs when a vertex has no unvisited adjacent vertices?
+C. The recursion backtracks to the previous vertex
+A. The traversal stops immediately
+D. The graph gets disconnected
+B. The algorithm moves to a random node
+64. Which algorithm repeatedly selects the minimum weighted edge to build an
+MST?
+A. Prim’s Algorithm
+D. Binary Search
+C. BFS
+B. DFS
+65. Which data structure is mainly used to implement BFS?
+C. Tree
+B. Queue
+A. Stack
+D. Array
+66. Which graph algorithm is widely used in GPS navigation systems?
+B. DFS
+A. Dijkstra’s Algorithm
+D. Prim’s Algorithm
+C. BFS
+67. Suppose a graph has edges A-B = 4, A-C = 2, and C-B = 1. What is the shortest
+distance from A to B?
+A. 4
+B. 3
+C. 2
+D. 5
+68. Which algorithm is commonly used for dependency scheduling?
+C. Merge Sort
+D. BFS
+B. Bubble Sort
+A. Topological Sort
+69. In BFS traversal, what does it indicate when the queue becomes empty?
+B. All reachable vertices have been visited
+D. The graph is disconnected
+A. The graph contains cycles
+C. The source vertex is removed
+70. Which traversal technique explores a graph by moving as deep as possible
+before backtracking?
+B. Breadth First Search
+C. Binary Search
+A. Depth First Search
+D. Linear Search
+71. In task scheduling systems, when can a task begin execution?
+C. Before dependencies are assigned
+A. Immediately after creation
+D. After visiting all graph vertices
+B. Only after all dependent tasks are completed
+72. Which graph representation usually consumes more memory regardless of edge
+count?
+A. Adjacency List
+C. Adjacency Matrix
+B. Edge List
+D. Linked Representation
+73. Which of the following algorithms can be used to find a Minimum Spanning
+Tree?
+A. Prim’s Algorithm
+B. Linear Search
+D. Depth First Search
+C. Binary Search
+74. In a directed graph, edges have:
+C. Levels
+A. Direction
+D. Heights
+B. Colors
+75. What is the maximum number of edges in a simple undirected graph with n
+vertices?
+C. n
+D. 2n
+A. n(n-1)/2
+B. n^2
+76. Which shortest path algorithm repeatedly selects the nearest unvisited vertex?
+D. Prim’s Algorithm
+A. Dijkstra’s Algorithm
+C. DFS
+B. BFS
+77. In adjacency matrices, absence of an edge is usually represented by:
+D. -5
+C. Infinity
+A. 0
+B. 1
+78. A graph that does not contain any cycle is called:
+D. Weighted Graph
+B. Cyclic Graph
+C. Acyclic Graph
+A. Complete Graph
+79. Which graph algorithm constructs a spanning tree without cycles?
+C. BFS
+B. DFS
+D. Selection Sort
+A. Prim’s Algorithm
+80. The minimum number of edges required to keep all vertices connected is
+determined in:
+A. Breadth First Search
+C. Binary Tree
+B. Minimum Spanning Tree
+D. Directed Graph
+81. In topological sorting, which type of vertex generally appears first?
+A. Vertex with highest out-degree
+D. Vertex with no outgoing edges
+B. Vertex with no incoming edges
+C. Vertex with maximum weight
+82. Which data structure supports DFS traversal most naturally?
+C. Tree
+D. Heap
+A. Stack
+B. Queue
+83. When applying Prim’s method to construct a spanning tree, the process begins
+from:
+D. The last vertex in the graph
+A. Any chosen vertex
+B. The edge with maximum weight
+C. The isolated vertex only
+84. A graph with self-loops removed is called:
+B. Complete Graph
+A. Simple Graph
+C. Cyclic Graph
+D. Dense Graph
+85. Which shortest path algorithm fails when negative edge weights are present?
+A. Dijkstra’s Algorithm
+B. BFS
+C. DFS
+D. Prim’s Algorithm
+86. Which algorithm is widely used to identify cycles in a graph by utilizing
+recursion or a recursion stack?
+D. Linear Search
+B. Breadth First Search (BFS)
+C. Binary Search
+A. Depth First Search (DFS)
+87. Which traversal algorithm is ideal for finding shortest paths in unweighted
+graphs?
+D. Kruskal’s Algorithm
+C. Prim’s Algorithm
+A. BFS
+B. DFS
+88. Which algorithm is commonly used to solve the Single-Source Shortest Path
+problem?
+A. Dijkstra’s Algorithm
+B. Selection Sort
+D. Kruskal’s Algorithm
+C. Prim’s Algorithm
+89. Which graph traversal technique explores all neighboring vertices before
+moving deeper?
+B. Breadth First Search
+C. Prim’s Algorithm
+A. Depth First Search
+D. Kruskal’s Algorithm
+90. A graph where every pair of vertices is directly connected is called:
+D. Null Graph
+B. Complete Graph
+A. Sparse Graph
+C. Directed Graph
+91. Which data structure helps optimize the execution of Dijkstra’s Algorithm?
+C. Priority Queue
+B. Stack
+D. Linked List
+A. Queue
+92. Which data structure is mainly used in Kahn’s algorithm for topological
+sorting?
+D. Tree
+B. Queue
+A. Stack
+C. Heap
+93. Which of the following is a practical application of Minimum Spanning Trees?
+B. Sorting arrays
+D. Text compression
+A. Designing network cables with minimum cost
+C. Database indexing
+94. Which algorithm is suitable for creating low-cost communication networks?
+B. DFS
+A. Minimum Spanning Tree
+D. Binary Search
+C. BFS
+95. For a graph containing 5 vertices, how many edges will appear in its Minimum
+Spanning Tree?
+A. 5
+D. 3
+C. 4
+B. 6
+96. Topological sorting can be performed only on which type of graph?
+A. Undirected Graph
+B. Complete Graph
+D. Weighted Graph
+C. Directed Acyclic Graph (DAG)
+97. Which graph-related idea is commonly used in computer networks to identify
+the most efficient route?
+C. Binary Tree Traversal
+B. Heap Sort
+D. Matrix Rotation
+A. Shortest Path Algorithm
+98. At initialization in Dijkstra’s Algorithm, what distance value is assigned to all
+unvisited vertices?
+D. Their edge weights
+A. 0
+C. Infinity
+B. -1
+99. What is the primary application of Dijkstra’s Algorithm?
+A. Building a spanning tree
+C. Finding shortest paths from a source vertex
+D. Sorting graph edges
+B. Detecting cycles
+100. A spanning tree for n vertices contains how many vertices?
+B. n-1
+C. n+1
+D. 2n
+A. n
+101. A graph in which every vertex is directly connected to every other vertex is
+called:
+B. Cyclic Graph
+C. Complete Graph
+D. Regular Graph
+A. Connected Graph
+102. In graph theory, a graph without any cycles is referred to as:
+A. Cyclic Graph
+D. Weighted Graph
+C. Acyclic Graph
+B. Complete Graph
+103. In an adjacency list, the neighbors of a vertex are stored as:
+C. Matrices
+A. Arrays of weights
+B. Linked lists or dynamic lists
+D. Binary trees
+104. What is the degree of a vertex in an undirected graph?
+C. Number of cycles
+B. Number of vertices
+D. Number of paths
+A. Number of incident edges
+105. Which of the following is a key property of a Minimum Spanning Tree?
+A. It contains cycles
+D. It requires equal edge weights
+C. It always has directed edges
+B. It connects all vertices with minimum total edge weight
+106. Breadth First Search traversal follows which technique?
+D. Divide and conquer
+B. Recursive traversal
+C. Queue-based traversal
+A. Stack-based traversal
+107. What is the first vertex distance initialized in Dijkstra’s Algorithm?
+A. 0
+C. -1
+B. Infinity
+D. 1
+108. Which of the following is a real-life use case of graph routing algorithms?
+D. Audio compression
+A. Social media photo editing
+C. Word processing
+B. Internet packet routing
+109. Within map-based navigation systems, roads are usually modeled as:
+D. Cycles
+B. Edges
+A. Vertices
+C. Trees
+110. At every stage of Prim’s Algorithm, which edge is chosen?
+A. Edge with the largest weight
+B. Random edge from the graph
+D. Edge forming a cycle
+C. Minimum-weight edge connecting visited and unvisited vertices
+111. In a simple directed graph having n vertices and no self-loops, what is the
+maximum possible number of edges?
+A. n(n-1)
+B. n(n-1)/2
+C. n^2
+D. 2n
+112. A graph containing at least one isolated vertex (degree 0) is known as:
+D. Complete Graph
+A. Connected Graph
+B. Null Graph
+C. Disconnected Graph
+113. A Directed Acyclic Graph is abbreviated as:
+A. DAG
+C. DST
+D. DGT
+B. DFG
+114. In an undirected graph, the degree of a vertex represents:
+D. Number of components in the graph
+A. Number of vertices connected indirectly
+C. Total number of cycles
+B. Number of edges incident on the vertex
+115. Which algorithm is commonly applied to perform topological sorting?
+C. Floyd Warshall Algorithm
+A. Dijkstra’s Algorithm
+B. Kahn’s Algorithm
+D. Bellman Ford Algorithm
+116. Which graph algorithm guarantees minimum connection cost?
+B. DFS
+D. Topological Sort
+A. MST
+C. BFS
+117. Which data structure is frequently utilized in Prim’s Algorithm to efficiently
+choose the smallest weighted edge?
+B. Stack
+D. Linked List
+C. Priority Queue
+A. Queue
+118. Which type of graph is mandatory for topological sorting?
+D. Weighted Graph
+B. Undirected Graph
+C. Complete Graph
+A. Directed Acyclic Graph
+119. While running Prim’s Algorithm, what happens if two candidate edges have
+identical minimum weights?
+B. Any one of them may be selected
+C. The algorithm stops immediately
+D. The graph becomes disconnected
+A. Both edges are rejected
+120. In DFS recursion, what happens after all neighbors are visited?
+C. Queue becomes empty
+B. Graph resets
+A. Backtracking occurs
+D. Sorting begins
+121. Which of the following tasks can commonly be solved using DFS?
+C. Bubble Sorting
+D. Binary Addition
+B. Matrix Multiplication
+A. Cycle Detection
+122. A graph is made up of a collection of vertices and:
+C. Trees
+D. Paths
+A. Arrays
+B. Edges
+123. A graph contains edges 1-2, 1-3, and 2-4. If DFS starts from vertex 1, which
+vertex is typically explored immediately after 1?
+D. None of these
+C. 3
+A. 4
+B. 2
+124. In Breadth First Search, which vertex is visited immediately after the source
+vertex?
+D. A random vertex
+C. The last inserted vertex
+A. The deepest vertex
+B. One of the adjacent vertices of the source
+125. How does Prim’s Algorithm gradually form the Minimum Spanning Tree?
+D. By connecting random vertices
+B. By adding one minimum-weight edge at a time
+A. By removing all cycles
+C. By sorting vertices alphabetically
+126. After choosing edge A-B = 2 in the previous graph, which edge will be selected
+next?
+A. A-C = 5
+C. A-B = 2 again
+D. No edge is selected
+B. B-C = 3
+127. In Prim’s algorithm, how many edges will the final Minimum Spanning Tree
+contain for a graph with n vertices?
+B. n-1
+C. 2n
+A. n
+D. n+1
+128. In a weighted connected graph, what does the MST guarantee?
+D. Equal distribution of edges
+C. Shortest path between every pair of vertices
+A. Maximum edge weight
+B. Minimum total connection cost
+129. Which of the following is a practical application of BFS?
+A. Social network friend suggestions
+C. Database encryption
+B. Image compression
+D. Compiler optimization
+130. Which algorithm is unsuitable for graphs with negative cycles?
+D. Prim’s Algorithm
+B. BFS
+C. DFS
+A. Dijkstra’s Algorithm
+131. When Dijkstra’s Algorithm begins, what distance value is assigned to the
+starting vertex?
+B. 0
+A. Infinity
+C. 1
+D. Maximum value
+132. Which traversal can be implemented recursively with ease?
+B. BFS
+C. Prim’s Algorithm
+D. Kruskal’s Algorithm
+A. DFS
+133. Which graph concept helps in resolving software dependencies?
+D. BFS
+C. Bubble Sort
+B. Heap Sort
+A. Topological Sorting
+134. Which data structure is primarily used while implementing Depth First
+Search?
+B. Stack
+C. Heap
+D. Linked Array
+A. Queue
+135. Which graph representation generally consumes more memory for dense
+graphs?
+D. Queue
+B. Adjacency List
+A. Adjacency Matrix
+C. Stack
+136. During each iteration of Dijkstra’s Algorithm, which vertex is chosen next?
+A. The vertex with maximum degree
+C. A random unvisited vertex
+B. The unvisited vertex with the smallest tentative distance
+D. The source vertex repeatedly
+137. A connected weighted graph has edges A-B=2, A-C=4, B-C=1, B-D=5, C-D=3,
+C-E=6, and D-E=2. What is the total weight of the Minimum Spanning Tree?
+C. 12
+B. 8
+A. 10
+D. 9
+138. Which statement is true regarding a Minimum Spanning Tree?
+B. It connects all vertices without cycles
+D. It cannot contain weights
+C. It must be directed
+A. It always contains cycles
+139. Which data structure is commonly used internally in Breadth First Search?
+B. Stack
+C. Heap
+D. Tree
+A. Queue
+140. Single-Source Shortest Path algorithms are generally applied on:
+D. Bipartite graphs only
+C. Disconnected trees only
+A. Weighted graphs
+B. Empty graphs
+141. In an adjacency list representation of a directed weighted graph, each list entry
+contains:
+C. Only edge weights
+B. Neighbor vertex and edge weight
+A. Only vertex numbers
+D. Source vertex only
+142. What is the full form of MST in graph theory?
+D. Minimum Search Technique
+C. Multiple Source Tree
+B. Minimum Spanning Tree
+A. Maximum Spanning Tree
+143. Depth First Search traversal works based on which principle?
+A. First In First Out (FIFO)
+C. Random Access
+B. Last In First Out (LIFO)
+D. Circular Traversal
+144. What is the primary objective of Prim’s Algorithm?
+D. To calculate graph diameter
+C. To sort graph vertices
+B. To create a minimum-cost spanning tree
+A. To detect cycles in a graph
+145. What is true about Single-Source Shortest Path problems when a graph
+contains negative weight cycles?
+D. All edges become positive
+A. Shortest paths become undefined
+C. Distances remain constant
+B. The graph converts into a tree
+146. Which statement best explains dependency resolution using topological
+sorting?
+D. Vertices are sorted by weight
+C. Cycles are added to the graph
+B. Independent tasks are executed before dependent tasks
+A. Tasks are processed in random order
+147. In the adjacency matrix of an unweighted graph, what value indicates that no
+edge exists between two vertices?
+D. Infinity
+C. 0
+A. 1
+B. -1
+148. Which of the following is NOT a graph traversal technique?
+D. Level Order Traversal
+A. DFS
+B. BFS
+C. Binary Search
+149. In network analysis, how are systems and their interconnections generally
+represented?
+C. Queues
+B. Graphs
+A. Arrays
+D. Stacks
+150. In dependency resolution, what occurs if circular dependencies are present?
+D. The graph becomes weighted
+C. Scheduling cannot be completed successfully
+A. Tasks execute normally
+B. Dependencies are ignored
