@@ -6,12 +6,16 @@ import ReportModal from '../components/ReportModal';
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  const { startExam, resetExam, testHistory } = useStore();
+  const { startExam, resetExam, testHistory, isExamStarted, isExamFinished, timeRemaining } = useStore();
   const [selectedReport, setSelectedReport] = useState<TestHistory | null>(null);
 
+  const isTestInProgress = isExamStarted && !isExamFinished && timeRemaining > 0;
+
   const handleStart = async () => {
-    resetExam();
-    startExam(120);
+    if (!isTestInProgress) {
+      resetExam();
+      startExam(120);
+    }
     try {
       await document.documentElement.requestFullscreen();
     } catch (e) {
@@ -150,13 +154,28 @@ const LandingPage = () => {
             </div>
 
             {/* Start Button */}
-            <div className="mt-auto pt-6">
+            <div className="mt-auto pt-6 flex flex-col gap-3">
               <button
                 onClick={handleStart}
                 className="minimal-btn-primary w-full text-lg py-4 justify-center"
               >
-                Start Test <ChevronRight className="w-5 h-5 ml-1" />
+                {isTestInProgress ? "Resume Test" : "Start Test"} <ChevronRight className="w-5 h-5 ml-1" />
               </button>
+              
+              {isTestInProgress && (
+                <button
+                  onClick={() => {
+                    if (window.confirm("Are you sure you want to start a new test? All current progress will be lost.")) {
+                      resetExam();
+                      startExam(120);
+                      navigate('/exam');
+                    }
+                  }}
+                  className="w-full text-sm font-bold text-gray-500 hover:text-[#e53935] underline transition-colors"
+                >
+                  Start Fresh (Reset Progress)
+                </button>
+              )}
             </div>
           </div>
 
