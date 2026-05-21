@@ -109,7 +109,7 @@ export const useStore = create<ExamState>()(
         const wrong = attempted - correct;
         const skipped = questions.length - attempted;
         const accuracy = attempted > 0 ? Math.round((correct / attempted) * 100) : 0;
-        const timeTaken = (30 * 60) - timeRemaining;
+        const timeTaken = (120 * 60) - timeRemaining;
         const m = Math.floor(timeTaken / 60);
         const s = timeTaken % 60;
 

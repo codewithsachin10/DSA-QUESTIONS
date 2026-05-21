@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Network, Clock, FileText, Layers, Trophy, TrendingUp, Calendar, ChevronRight } from 'lucide-react';
+import { Network, Clock, FileText, Layers, Trophy, TrendingUp, Calendar, ChevronRight, Terminal, Code2 } from 'lucide-react';
 import { useStore, TestHistory } from '../store/useStore';
 import ReportModal from '../components/ReportModal';
 
@@ -11,7 +11,7 @@ const LandingPage = () => {
 
   const handleStart = async () => {
     resetExam();
-    startExam(30);
+    startExam(120);
     try {
       await document.documentElement.requestFullscreen();
     } catch (e) {
@@ -90,9 +90,11 @@ const LandingPage = () => {
           </div>
         </aside>
 
-        {/* Center — Test Card */}
-        <div className="flex-1 flex items-start justify-center order-1 lg:order-2">
-          <div className="minimal-card max-w-xl w-full p-8 md:p-10 bg-white">
+        {/* Center — Action Cards */}
+        <div className="flex-1 flex flex-col md:flex-row items-stretch justify-center order-1 lg:order-2 gap-6">
+          
+          {/* Test Card */}
+          <div className="minimal-card flex-1 w-full p-8 bg-white flex flex-col">
             
             {/* Header */}
             <div className="flex items-center gap-3 mb-8 pb-6 border-b-[1.5px] border-gray-100">
@@ -114,7 +116,7 @@ const LandingPage = () => {
               </div>
               <div className="flex flex-col items-center p-4 bg-[#f8f9fa] border-[1.5px] border-gray-200 rounded-[8px]">
                 <Clock className="w-5 h-5 text-[#e53935] mb-2" />
-                <span className="text-2xl font-black text-black">30</span>
+                <span className="text-2xl font-black text-black">120</span>
                 <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Minutes</span>
               </div>
               <div className="flex flex-col items-center p-4 bg-[#f8f9fa] border-[1.5px] border-gray-200 rounded-[8px]">
@@ -148,12 +150,72 @@ const LandingPage = () => {
             </div>
 
             {/* Start Button */}
-            <button
-              onClick={handleStart}
-              className="minimal-btn-primary w-full text-lg py-4 justify-center"
-            >
-              Start Test <ChevronRight className="w-5 h-5 ml-1" />
-            </button>
+            <div className="mt-auto pt-6">
+              <button
+                onClick={handleStart}
+                className="minimal-btn-primary w-full text-lg py-4 justify-center"
+              >
+                Start Test <ChevronRight className="w-5 h-5 ml-1" />
+              </button>
+            </div>
+          </div>
+
+          {/* Coding Playground Card */}
+          <div className="minimal-card flex-1 w-full p-8 bg-white flex flex-col">
+            
+            {/* Header */}
+            <div className="flex items-center gap-3 mb-8 pb-6 border-b-[1.5px] border-gray-100 shrink-0">
+              <div className="w-12 h-12 bg-black border-[1.5px] border-black rounded-[10px] shadow-[2px_2px_0px_0px_rgba(229,57,53,1)] flex items-center justify-center">
+                <Terminal className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold text-black tracking-tight">Graph DSA Codes</h1>
+                <p className="text-sm text-gray-500 font-medium">Implementation & Logic</p>
+              </div>
+            </div>
+
+            {/* Test Details */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="flex flex-col items-center p-4 bg-[#f8f9fa] border-[1.5px] border-gray-200 rounded-[8px]">
+                <Code2 className="w-5 h-5 text-black mb-2" />
+                <span className="text-2xl font-black text-black">11</span>
+                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Programs</span>
+              </div>
+              <div className="flex flex-col items-center p-4 bg-[#f8f9fa] border-[1.5px] border-gray-200 rounded-[8px]">
+                <Terminal className="w-5 h-5 text-black mb-2" />
+                <span className="text-2xl font-black text-black">C</span>
+                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Language</span>
+              </div>
+            </div>
+
+            {/* Instructions */}
+            <div className="mb-8 p-4 bg-gray-50 border-[1.5px] border-gray-300 rounded-[8px]">
+              <h3 className="text-sm font-bold text-black uppercase tracking-wider mb-3">Features</h3>
+              <ul className="space-y-2 text-sm text-gray-600 font-medium">
+                <li className="flex items-start gap-2">
+                  <span className="text-black mt-0.5">•</span>
+                  Interactive code playground.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-black mt-0.5">•</span>
+                  Line-by-line detailed explanations.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-black mt-0.5">•</span>
+                  Simulated terminal outputs.
+                </li>
+              </ul>
+            </div>
+
+            {/* Open Button */}
+            <div className="mt-auto pt-6">
+              <button
+                onClick={() => navigate('/code')}
+                className="w-full text-lg font-black bg-black text-white py-4 border-2 border-black rounded-[8px] shadow-[4px_4px_0px_0px_rgba(229,57,53,1)] hover:-translate-y-1 hover:translate-x-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(229,57,53,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none transition-all flex items-center justify-center gap-2 uppercase tracking-widest"
+              >
+                Open Code <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
           </div>
         </div>
       </main>

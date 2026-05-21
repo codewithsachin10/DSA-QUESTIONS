@@ -3,6 +3,7 @@ import LandingPage from './pages/LandingPage';
 import ExamPage from './pages/ExamPage';
 import ResultPage from './pages/ResultPage';
 import ReviewPage from './pages/ReviewPage';
+import CodingPage from './pages/CodingPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/exam" element={<ExamPage />} />
         <Route path="/result" element={<ResultPage />} />
         <Route path="/review" element={<ReviewPage />} />
+        <Route path="/code" element={<CodingPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

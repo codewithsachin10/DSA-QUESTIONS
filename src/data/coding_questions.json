@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "City Transport Network",
+    "category": "In Class",
+    "difficulty": "Easy",
+    "language": "C",
+    "code": "#include <stdio.h>\n\nint main() {\n    int n, m;\n    scanf(\"%d %d\", &n, &m);\n    int adj[n][n];\n    for(int i = 0; i < n; i++) {\n        for(int j = 0; j < n; j++) {\n            adj[i][j] = 0;\n        }\n    }\n    int u, v;\n    for(int i = 0; i < m; i++) {\n        scanf(\"%d %d\", &u, &v);\n        adj[u - 1][v - 1] = 1;\n    }\n    for(int i = 0; i < n; i++) {\n        for(int j = 0; j < n; j++) {\n            printf(\"%d \", adj[i][j]);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}"
+  },
+  {
+    "id": 2,
+    "title": "Constructing a Social Network Graph",
+    "category": "In Class",
+    "difficulty": "Easy",
+    "language": "C",
+    "code": "#include <stdio.h>\n\nint main() {\n    int n, m;\n    scanf(\"%d %d\", &n, &m);\n    int adj[n][n];\n    for(int i = 0; i < n; i++) {\n        for(int j = 0; j < n; j++) {\n            adj[i][j] = 0;\n        }\n    }\n    int u, v;\n    for(int i = 0; i < m; i++) {\n        scanf(\"%d %d\", &u, &v);\n        adj[u - 1][v - 1] = 1;\n        adj[v - 1][u - 1] = 1; // undirected graph\n    }\n    for(int i = 0; i < n; i++) {\n        for(int j = 0; j < n; j++) {\n            printf(\"%d \", adj[i][j]);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}"
+  },
+  {
+    "id": 3,
+    "title": "City Transportation System",
+    "category": "In Class",
+    "difficulty": "Medium",
+    "language": "C",
+    "code": "#include <stdio.h>\n\nint main() {\n    int n, m;\n    scanf(\"%d %d\", &n, &m);\n    int adj[n][n];\n    int size[n];\n    for(int i = 0; i < n; i++) {\n        size[i] = 0;\n    }\n    int u, v;\n    for(int i = 0; i < m; i++) {\n        scanf(\"%d %d\", &u, &v);\n        // Convert to 0-based indexing\n        u = u - 1;\n        v = v - 1;\n        // Add v to u's list\n        adj[u][size[u]] = v;\n        size[u]++;\n        // Add u to v's list (undirected graph)\n        adj[v][size[v]] = u;\n        size[v]++;\n    }\n    // Print adjacency list\n    for(int i = 0; i < n; i++) {\n        printf(\"City %d: \", i + 1);\n        for(int j = 0; j < size[i]; j++) {\n            printf(\"%d \", adj[i][j] + 1); // convert back to 1-based\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}"
+  },
+  {
+    "id": 4,
+    "title": "Constructing a Weighted Graph",
+    "category": "In Class",
+    "difficulty": "Medium",
+    "language": "C",
+    "code": "#include <stdio.h>\n\nint main() {\n    int n, m;\n    scanf(\"%d %d\", &n, &m);\n    int adj[n][n]; // stores neighbors\n    int weight[n][n]; // stores weights\n    int size[n]; // number of neighbors\n    for(int i = 0; i < n; i++) {\n        size[i] = 0;\n    }\n    int u, v, w;\n    // Input edges\n    for(int i = 0; i < m; i++) {\n        scanf(\"%d %d %d\", &u, &v, &w);\n        // Convert to 0-based\n        u = u - 1;\n        v = v - 1;\n        // Add edge u -> v\n        adj[u][size[u]] = v;\n        weight[u][size[u]] = w;\n        size[u]++;\n        // Add edge v -> u (undirected)\n        adj[v][size[v]] = u;\n        weight[v][size[v]] = w;\n        size[v]++;\n    }\n    // Print adjacency list\n    for(int i = 0; i < n; i++) {\n        printf(\"%d\", i + 1);\n        for(int j = 0; j < size[i]; j++) {\n            printf(\" -> (%d, %d)\", adj[i][j] + 1, weight[i][j]);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}"
+  },
+  {
+    "id": 5,
+    "title": "Exploring City Routes",
+    "category": "In Class",
+    "difficulty": "Medium",
+    "language": "C",
+    "code": "#include <stdio.h>\n#define MAX 100\n\nint adj[MAX][MAX]; // adjacency list\nint size[MAX]; // number of neighbors\nint visited[MAX]; // visited array\n\n// DFS function\nvoid dfs(int node) {\n    printf(\"%d \", node);\n    visited[node] = 1;\n    for(int i = 0; i < size[node]; i++) {\n        int neighbor = adj[node][i];\n        if(visited[neighbor] == 0) {\n            dfs(neighbor);\n        }\n    }\n}\n\nint main() {\n    int n, m;\n    scanf(\"%d\", &n);\n    scanf(\"%d\", &m);\n    // Initialize\n    for(int i = 0; i < n; i++) {\n        size[i] = 0;\n        visited[i] = 0;\n    }\n    // Input edges\n    for(int i = 0; i < m; i++) {\n        int u, v;\n        scanf(\"%d %d\", &u, &v);\n        adj[u][size[u]++] = v;\n        adj[v][size[v]++] = u; // undirected graph\n    }\n    int start;\n    scanf(\"%d\", &start);\n    dfs(start);\n    return 0;\n}"
+  },
+  {
+    "id": 6,
+    "title": "City Infrastructure Planning",
+    "category": "In Class",
+    "difficulty": "Hard",
+    "language": "C",
+    "code": "#include <stdio.h>\n#include <stdbool.h>\n\nint adj[100][100];\nint size[100];\n\nvoid bfs(int start, int n) {\n    bool visited[100] = {false};\n    int queue[100];\n    int front = 0;\n    int rear = 0;\n    visited[start] = true;\n    queue[rear++] = start;\n    while(front < rear) {\n        int district = queue[front++];\n        printf(\"%d \", district + 1);\n        for(int i = 0; i < size[district]; i++) {\n            int neighbor = adj[district][i];\n            if(!visited[neighbor]) {\n                visited[neighbor] = true;\n                queue[rear++] = neighbor;\n            }\n        }\n    }\n}\n\nint main() {\n    int n, m;\n    scanf(\"%d\", &n);\n    scanf(\"%d\", &m);\n    for(int i = 0; i < n; i++) {\n        size[i] = 0;\n    }\n    for(int i = 0; i < m; i++) {\n        int u, v;\n        scanf(\"%d %d\", &u, &v);\n        u--;\n        v--;\n        adj[u][size[u]++] = v;\n        adj[v][size[v]++] = u;\n    }\n    int start;\n    scanf(\"%d\", &start);\n    start--;\n    bfs(start, n);\n    return 0;\n}"
+  },
+  {
+    "id": 7,
+    "title": "Road Network Connectivity",
+    "category": "Post Class",
+    "difficulty": "Medium",
+    "language": "C",
+    "code": "#include <stdio.h>\n#define MAX 100\n\nint graph[MAX][MAX];\nint reverseGraph[MAX][MAX];\nint visited[MAX];\nint n;\n\n// DFS function\nvoid dfs(int node, int arr[MAX][MAX]) {\n    visited[node] = 1;\n    for(int i = 1; i <= n; i++) {\n        if(arr[node][i] == 1 && !visited[i]) {\n            dfs(i, arr);\n        }\n    }\n}\n\n// Function to reset visited array\nvoid resetVisited() {\n    for(int i = 1; i <= n; i++) {\n        visited[i] = 0;\n    }\n}\n\nint main() {\n    int m;\n    scanf(\"%d\", &n);\n    scanf(\"%d\", &m);\n    // Input edges\n    for(int i = 0; i < m; i++) {\n        int u, v;\n        scanf(\"%d %d\", &u, &v);\n        graph[u][v] = 1;\n        // reverse graph\n        reverseGraph[v][u] = 1;\n    }\n    // DFS on original graph\n    dfs(1, graph);\n    for(int i = 1; i <= n; i++) {\n        if(!visited[i]) {\n            printf(\"The road network is not connected.\");\n            return 0;\n        }\n    }\n    // Reset visited array\n    resetVisited();\n    // DFS on reversed graph\n    dfs(1, reverseGraph);\n    for(int i = 1; i <= n; i++) {\n        if(!visited[i]) {\n            printf(\"The road network is not connected.\");\n            return 0;\n        }\n    }\n    printf(\"The road network is connected.\");\n    return 0;\n}"
+  },
+  {
+    "id": 8,
+    "title": "Access to Libraries in HackerLand",
+    "category": "Post Class",
+    "difficulty": "Hard",
+    "language": "C",
+    "code": "#include <stdio.h>\n#define MAX 100\n\nint adj[MAX][MAX];\nint size[MAX];\nint visited[MAX];\n\n// DFS function\nint dfs(int node) {\n    visited[node] = 1;\n    int cities = 1;\n    for(int i = 0; i < size[node]; i++) {\n        int next = adj[node][i];\n        if(!visited[next]) {\n            cities += dfs(next);\n        }\n    }\n    return cities;\n}\n\nint main() {\n    int q;\n    scanf(\"%d\", &q);\n    while(q--) {\n        int n, m;\n        int c_lib, c_road;\n        scanf(\"%d %d %d %d\", &n, &m, &c_lib, &c_road);\n        // Reset arrays\n        for(int i = 1; i <= n; i++) {\n            size[i] = 0;\n            visited[i] = 0;\n        }\n        // Input roads\n        for(int i = 0; i < m; i++) {\n            int u, v;\n            scanf(\"%d %d\", &u, &v);\n            adj[u][size[u]++] = v;\n            adj[v][size[v]++] = u;\n        }\n        int totalCost = 0;\n        // If roads are expensive\n        if(c_road >= c_lib) {\n            totalCost = n * c_lib;\n        }\n        else {\n            // Find connected components\n            for(int i = 1; i <= n; i++) {\n                if(!visited[i]) {\n                    int cities = dfs(i);\n                    // 1 library\n                    totalCost += c_lib;\n                    // roads for remaining cities\n                    totalCost += (cities - 1) * c_road;\n                }\n            }\n        }\n        printf(\"%d\\n\", totalCost);\n    }\n    return 0;\n}"
+  },
+  {
+    "id": 9,
+    "title": "Selecting Diverse Astronauts for a Lunar Mission",
+    "category": "Post Class",
+    "difficulty": "Medium",
+    "language": "C",
+    "code": "#include <stdio.h>\n#define MAX 100\n\nint adj[MAX][MAX];\nint size[MAX];\nint visited[MAX];\n\n// DFS function\nint dfs(int node) {\n    visited[node] = 1;\n    int count = 1;\n    for(int i = 0; i < size[node]; i++) {\n        int next = adj[node][i];\n        if(!visited[next]) {\n            count += dfs(next);\n        }\n    }\n    return count;\n}\n\nint main() {\n    int n, p;\n    scanf(\"%d %d\", &n, &p);\n    // Input graph\n    for(int i = 0; i < p; i++) {\n        int u, v;\n        scanf(\"%d %d\", &u, &v);\n        adj[u][size[u]++] = v;\n        adj[v][size[v]++] = u;\n    }\n    int component[MAX];\n    int components = 0;\n    // Find connected components\n    for(int i = 0; i < n; i++) {\n        if(!visited[i]) {\n            component[components++] = dfs(i);\n        }\n    }\n    // Count valid pairs\n    int answer = 0;\n    int sum = 0;\n    for(int i = 0; i < components; i++) {\n        answer += component[i] * sum;\n        sum += component[i];\n    }\n    printf(\"%d\", answer);\n    return 0;\n}"
+  },
+  {
+    "id": 10,
+    "title": "Shortest Route Finder in a City",
+    "category": "Challenges",
+    "difficulty": "Hard",
+    "language": "C",
+    "code": "#include <stdio.h>\n#define MAX 100\n\nint adj[MAX][MAX];\nint size[MAX];\nint queue[MAX];\nint visited[MAX];\nint distanceArr[MAX];\n\n// BFS function\nvoid bfs(int start, int n) {\n    int front = 0;\n    int rear = 0;\n    queue[rear++] = start;\n    visited[start] = 1;\n    distanceArr[start] = 0;\n    while(front < rear) {\n        int node = queue[front++];\n        for(int i = 0; i < size[node]; i++) {\n            int next = adj[node][i];\n            if(!visited[next]) {\n                visited[next] = 1;\n                distanceArr[next] = distanceArr[node] + 6;\n                queue[rear++] = next;\n            }\n        }\n    }\n}\n\nint main() {\n    int q;\n    scanf(\"%d\", &q);\n    while(q--) {\n        int n, m;\n        scanf(\"%d %d\", &n, &m);\n        // Reset arrays\n        for(int i = 1; i <= n; i++) {\n            size[i] = 0;\n            visited[i] = 0;\n            distanceArr[i] = -1;\n        }\n        // Input graph\n        for(int i = 0; i < m; i++) {\n            int u, v;\n            scanf(\"%d %d\", &u, &v);\n            adj[u][size[u]++] = v;\n            adj[v][size[v]++] = u;\n        }\n        int start;\n        scanf(\"%d\", &start);\n        bfs(start, n);\n        // Print distances\n        for(int i = 1; i <= n; i++) {\n            if(i != start) {\n                printf(\"%d \", distanceArr[i]);\n            }\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}"
+  },
+  {
+    "id": 11,
+    "title": "Edge Removal for Connected Components",
+    "category": "Challenges",
+    "difficulty": "Hard",
+    "language": "C",
+    "code": "#include <stdio.h>\n#define MAX 100\n\nint adj[MAX][MAX];\nint size[MAX];\nint visited[MAX];\n\n// DFS function\nvoid dfs(int node) {\n    visited[node] = 1;\n    for(int i = 0; i < size[node]; i++) {\n        int next = adj[node][i];\n        if(!visited[next]) {\n            dfs(next);\n        }\n    }\n}\n\nint main() {\n    int n, m, k;\n    scanf(\"%d %d %d\", &n, &m, &k);\n    // Input graph\n    for(int i = 0; i < m; i++) {\n        int u, v;\n        scanf(\"%d %d\", &u, &v);\n        adj[u][size[u]++] = v;\n        adj[v][size[v]++] = u;\n    }\n    int components = 0;\n    // Find connected components\n    for(int i = 1; i <= n; i++) {\n        if(!visited[i]) {\n            dfs(i);\n            components++;\n        }\n    }\n    // Impossible case\n    if(components > k) {\n        printf(\"-1\");\n    }\n    else {\n        int removable = m - (n - k);\n        printf(\"%d\", removable);\n    }\n    return 0;\n}"
+  }
+]
