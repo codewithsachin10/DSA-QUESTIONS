@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import questionsData from '../data/questions.json';
+import { supabase } from '../lib/supabase';
 
 export interface Question {
   id: number;
@@ -36,6 +36,7 @@ export interface ExamState {
   testHistory: TestHistory[];
   
   // Actions
+  fetchQuestions: (course?: string) => Promise<void>;
   startExam: (durationMinutes: number) => void;
   submitExam: () => void;
   setAnswer: (questionId: number, answer: string) => void;
@@ -47,12 +48,13 @@ export interface ExamState {
   tickTimer: () => void;
   resetExam: () => void;
   saveTestResult: () => void;
+  setQuestions: (questions: Question[]) => void;
 }
 
 export const useStore = create<ExamState>()(
   persist(
     (set, get) => ({
-      questions: questionsData,
+      questions: [],
       currentQuestionIndex: 0,
       answers: {},
       questionStatus: {},
@@ -61,17 +63,27 @@ export const useStore = create<ExamState>()(
       isExamFinished: false,
       testHistory: [],
 
+      fetchQuestions: async (course = 'DSA') => {
+        const { data, error } = await supabase.from('mcq_questions').select('*').eq('course', course).order('id');
+        if (!error && data) {
+          set({ questions: data as Question[] });
+        } else {
+          console.error("Failed to fetch MCQ questions from Supabase", error);
+        }
+      },
+
       startExam: (durationMinutes) => {
         const initialStatus: Record<number, QuestionStatus> = {};
-        questionsData.forEach(q => {
+        const activeQuestions = get().questions;
+        activeQuestions.forEach(q => {
           initialStatus[q.id] = 'unvisited';
         });
-        if (questionsData.length > 0) {
-          initialStatus[questionsData[0].id] = 'unanswered';
+        if (activeQuestions.length > 0) {
+          initialStatus[activeQuestions[0].id] = 'unanswered';
         }
 
         set({
-          questions: questionsData,
+          questions: activeQuestions,
           isExamStarted: true,
           isExamFinished: false,
           timeRemaining: durationMinutes * 60,
@@ -83,7 +95,6 @@ export const useStore = create<ExamState>()(
 
       submitExam: () => {
         set({ isExamFinished: true });
-        // Auto-save result after submitting
         setTimeout(() => get().saveTestResult(), 100);
       },
 
@@ -190,14 +201,23 @@ export const useStore = create<ExamState>()(
         answers: {},
         questionStatus: {},
       }),
+
+      setQuestions: (newQuestions) => {
+        set({ questions: newQuestions });
+      },
     }),
     {
       name: 'exam-storage',
-      merge: (persistedState: any, currentState: ExamState) => ({
-        ...currentState,
-        ...persistedState,
-        questions: questionsData,
-      }),
+      // We only want to persist answers and history, not the questions array (fetched live)
+      partialize: (state) => ({ 
+        answers: state.answers, 
+        questionStatus: state.questionStatus,
+        timeRemaining: state.timeRemaining,
+        isExamStarted: state.isExamStarted,
+        isExamFinished: state.isExamFinished,
+        testHistory: state.testHistory,
+        currentQuestionIndex: state.currentQuestionIndex
+      })
     }
   )
 );

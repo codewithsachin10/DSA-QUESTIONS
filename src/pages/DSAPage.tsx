@@ -1,0 +1,282 @@
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Network, Clock, FileText, Layers, Trophy, TrendingUp, Calendar, ChevronRight, Terminal, Code2, ExternalLink } from 'lucide-react';
+import { useStore, TestHistory } from '../store/useStore';
+import ReportModal from '../components/ReportModal';
+
+const DSAPage = () => {
+  const navigate = useNavigate();
+  const { startExam, resetExam, testHistory, isExamStarted, isExamFinished, timeRemaining, fetchQuestions } = useStore();
+  const [selectedReport, setSelectedReport] = useState<TestHistory | null>(null);
+
+  useEffect(() => {
+    fetchQuestions('DSA');
+  }, []);
+
+  const isTestInProgress = isExamStarted && !isExamFinished && timeRemaining > 0;
+
+  const handleStart = async () => {
+    if (!isTestInProgress) {
+      resetExam();
+      startExam(120);
+    }
+    try {
+      await document.documentElement.requestFullscreen();
+    } catch (e) {
+      console.warn('Fullscreen not supported or denied');
+    }
+    navigate('/exam');
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col bg-[#f8f9fa] font-sans">
+      
+      {/* Header */}
+      <header className="bg-white border-b-[1.5px] border-black py-3 px-6 flex justify-between items-center sticky top-0 z-20 shadow-[0_2px_0px_0px_rgba(0,0,0,0.05)]">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 bg-[#e53935] rounded-[6px] border-[1.5px] border-black flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+            <Network className="w-4 h-4 text-white" />
+          </div>
+          <span className="font-bold text-lg tracking-tight text-black">CodeNest <span className="text-[#e53935]">2.0</span></span>
+        </div>
+        <div className="flex items-center gap-3 md:gap-4">
+          <button
+            onClick={() => navigate('/')}
+            className="flex items-center gap-2 font-black text-sm uppercase tracking-widest bg-white text-black px-3 py-1.5 rounded-[6px] border-[1.5px] border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-gray-50 active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all"
+          >
+            Home
+          </button>
+          <a
+            href="/admin"
+            className="flex items-center gap-2 text-xs font-black text-white border-2 border-black bg-black hover:bg-[#e53935] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] px-3 py-1.5 rounded-[6px] transition-all active:translate-y-[2px] active:translate-x-[2px] active:shadow-none"
+          >
+            Admin Panel
+          </a>
+          <a
+            href="/editor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-xs font-black text-black border-2 border-black bg-yellow-300 hover:bg-yellow-400 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] px-3 py-1.5 rounded-[6px] transition-all active:translate-y-[2px] active:translate-x-[2px] active:shadow-none"
+          >
+            Open Editor <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+          <div className="w-8 h-8 bg-[#ffebee] border-[1.5px] border-black rounded-full flex items-center justify-center text-xs font-bold text-[#e53935] shrink-0">
+            SG
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="flex-1 flex flex-col lg:flex-row max-w-[1200px] mx-auto w-full p-4 md:p-6 gap-6">
+        
+        {/* Sidebar — Past Tests */}
+        <aside className="w-full lg:w-[280px] shrink-0 order-2 lg:order-1">
+          <div className="minimal-card p-5 bg-white lg:sticky lg:top-[72px]">
+            <div className="flex items-center gap-2 text-[#e53935] font-bold mb-4 pb-3 border-b-[1.5px] border-gray-100">
+              <Trophy className="w-4 h-4" />
+              Past Results
+            </div>
+
+            {testHistory.length === 0 ? (
+              <div className="text-center py-8">
+                <div className="w-12 h-12 bg-[#f8f9fa] border-[1.5px] border-gray-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <TrendingUp className="w-5 h-5 text-gray-400" />
+                </div>
+                <p className="text-sm font-medium text-gray-400">No tests taken yet</p>
+                <p className="text-xs text-gray-300 mt-1">Your results will appear here</p>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                {testHistory.map((entry) => {
+                  const percent = Math.round((entry.score / entry.total) * 100);
+                  const color = percent >= 70 ? 'text-green-600 bg-[#f0fdf4] border-green-200' : percent >= 50 ? 'text-yellow-600 bg-yellow-50 border-yellow-200' : 'text-[#e53935] bg-[#fff9fa] border-[#fca5a5]';
+                  
+                  return (
+                    <div key={entry.id} onClick={() => setSelectedReport(entry)} className="p-3 border-[1.5px] border-gray-200 rounded-[8px] hover:border-black hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all cursor-pointer">
+                      <div className="flex justify-between items-start mb-2">
+                        <div className="flex items-center gap-1.5 text-xs text-gray-400 font-medium">
+                          <Calendar className="w-3 h-3" />
+                          {entry.date}
+                        </div>
+                        <span className={`text-xs font-bold px-2 py-0.5 rounded-full border ${color}`}>
+                          {percent}%
+                        </span>
+                      </div>
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-lg font-black text-black">{entry.score}</span>
+                        <span className="text-sm text-gray-400 font-medium">/ {entry.total}</span>
+                      </div>
+                      <div className="flex justify-between items-center mt-1">
+                        <span className="text-xs text-gray-400 font-medium">{entry.timeTaken}</span>
+                        <span className="text-xs text-[#e53935] font-semibold">View Report →</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        </aside>
+
+        {/* Center — Action Cards */}
+        <div className="flex-1 flex flex-col md:flex-row items-stretch justify-center order-1 lg:order-2 gap-6">
+          
+          {/* Test Card */}
+          <div className="minimal-card flex-1 w-full p-8 bg-white flex flex-col">
+            
+            {/* Header */}
+            <div className="flex items-center gap-3 mb-8 pb-6 border-b-[1.5px] border-gray-100">
+              <div className="w-12 h-12 bg-[#ffebee] border-[1.5px] border-black rounded-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
+                <Network className="w-6 h-6 text-[#e53935]" />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold text-black tracking-tight">Graph MCQ Practice</h1>
+                <p className="text-sm text-gray-500 font-medium">Data Structures & Algorithms</p>
+              </div>
+            </div>
+
+            {/* Test Details */}
+            <div className="grid grid-cols-3 gap-4 mb-8">
+              <div className="flex flex-col items-center p-4 bg-[#f8f9fa] border-[1.5px] border-gray-200 rounded-[8px]">
+                <FileText className="w-5 h-5 text-[#e53935] mb-2" />
+                <span className="text-2xl font-black text-black">150</span>
+                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Questions</span>
+              </div>
+              <div className="flex flex-col items-center p-4 bg-[#f8f9fa] border-[1.5px] border-gray-200 rounded-[8px]">
+                <Clock className="w-5 h-5 text-[#e53935] mb-2" />
+                <span className="text-2xl font-black text-black">120</span>
+                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Minutes</span>
+              </div>
+              <div className="flex flex-col items-center p-4 bg-[#f8f9fa] border-[1.5px] border-gray-200 rounded-[8px]">
+                <Layers className="w-5 h-5 text-[#e53935] mb-2" />
+                <span className="text-2xl font-black text-black">MCQ</span>
+                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Type</span>
+              </div>
+            </div>
+
+            {/* Instructions */}
+            <div className="mb-8 p-4 bg-[#fff9fa] border-[1.5px] border-[#fca5a5] rounded-[8px]">
+              <h3 className="text-sm font-bold text-[#e53935] uppercase tracking-wider mb-3">Instructions</h3>
+              <ul className="space-y-2 text-sm text-black font-medium">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#e53935] mt-0.5">•</span>
+                  The test will enter fullscreen mode automatically.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#e53935] mt-0.5">•</span>
+                  Select the correct option for each question.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#e53935] mt-0.5">•</span>
+                  Correct answers turn green, wrong answers turn red.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#e53935] mt-0.5">•</span>
+                  Click "End Test" to submit and view your report.
+                </li>
+              </ul>
+            </div>
+
+            {/* Start Button */}
+            <div className="mt-auto pt-6 flex flex-col gap-3">
+              <button
+                onClick={handleStart}
+                className="minimal-btn-primary w-full text-lg py-4 justify-center"
+              >
+                {isTestInProgress ? "Resume Test" : "Start Test"} <ChevronRight className="w-5 h-5 ml-1" />
+              </button>
+              
+              {isTestInProgress && (
+                <button
+                  onClick={() => {
+                    if (window.confirm("Are you sure you want to start a new test? All current progress will be lost.")) {
+                      resetExam();
+                      startExam(120);
+                      navigate('/exam');
+                    }
+                  }}
+                  className="w-full text-sm font-bold text-gray-500 hover:text-[#e53935] underline transition-colors"
+                >
+                  Start Fresh (Reset Progress)
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Coding Playground Card */}
+          <div className="minimal-card flex-1 w-full p-8 bg-white flex flex-col">
+            
+            {/* Header */}
+            <div className="flex items-center gap-3 mb-8 pb-6 border-b-[1.5px] border-gray-100 shrink-0">
+              <div className="w-12 h-12 bg-black border-[1.5px] border-black rounded-[10px] shadow-[2px_2px_0px_0px_rgba(229,57,53,1)] flex items-center justify-center">
+                <Terminal className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold text-black tracking-tight">Graph DSA Codes</h1>
+                <p className="text-sm text-gray-500 font-medium">Implementation & Logic</p>
+              </div>
+            </div>
+
+            {/* Test Details */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="flex flex-col items-center p-4 bg-[#f8f9fa] border-[1.5px] border-gray-200 rounded-[8px]">
+                <Code2 className="w-5 h-5 text-black mb-2" />
+                <span className="text-2xl font-black text-black">11</span>
+                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Programs</span>
+              </div>
+              <div className="flex flex-col items-center p-4 bg-[#f8f9fa] border-[1.5px] border-gray-200 rounded-[8px]">
+                <Terminal className="w-5 h-5 text-black mb-2" />
+                <span className="text-2xl font-black text-black">C</span>
+                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Language</span>
+              </div>
+            </div>
+
+            {/* Instructions */}
+            <div className="mb-8 p-4 bg-gray-50 border-[1.5px] border-gray-300 rounded-[8px]">
+              <h3 className="text-sm font-bold text-black uppercase tracking-wider mb-3">Features</h3>
+              <ul className="space-y-2 text-sm text-gray-600 font-medium">
+                <li className="flex items-start gap-2">
+                  <span className="text-black mt-0.5">•</span>
+                  Interactive code playground.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-black mt-0.5">•</span>
+                  Line-by-line detailed explanations.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-black mt-0.5">•</span>
+                  Simulated terminal outputs.
+                </li>
+              </ul>
+            </div>
+
+            {/* Open Button */}
+            <div className="mt-auto pt-6">
+              <button
+                onClick={() => navigate('/code')}
+                className="w-full text-lg font-black bg-black text-white py-4 border-2 border-black rounded-[8px] shadow-[4px_4px_0px_0px_rgba(229,57,53,1)] hover:-translate-y-1 hover:translate-x-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(229,57,53,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none transition-all flex items-center justify-center gap-2 uppercase tracking-widest"
+              >
+                Open Code <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-white border-t-[1.5px] border-gray-200 py-4 px-6">
+        <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-sm text-gray-400 font-medium">
+          <span>CodeNest 2.0 — DSA Unit 4</span>
+          <span>Built for exam preparation</span>
+        </div>
+      </footer>
+
+      {/* Report Modal */}
+      {selectedReport && (
+        <ReportModal entry={selectedReport} onClose={() => setSelectedReport(null)} />
+      )}
+    </div>
+  );
+};
+
+export default DSAPage;

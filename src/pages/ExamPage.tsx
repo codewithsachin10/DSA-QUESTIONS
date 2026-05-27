@@ -73,7 +73,7 @@ const ExamPage = () => {
       
       <header className="bg-white border-b-[1.5px] border-black py-3 px-6 flex justify-between items-center z-10 sticky top-0 shadow-[0_2px_0px_0px_rgba(0,0,0,0.05)]">
         <div className="flex items-center gap-2">
-          <span className="font-bold text-lg tracking-tight text-black">Graph <span className="text-[#e53935]">Practice</span></span>
+          <span className="font-bold text-lg tracking-tight text-black">CodeNest <span className="text-[#e53935]">2.0</span></span>
         </div>
 
         <div className="flex items-center gap-6">

@@ -1,13 +1,35 @@
-import { useState } from 'react';
-import { Terminal, ChevronRight } from 'lucide-react';
-import questionsData from '../data/coding_questions.json';
+import { useState, useEffect } from 'react';
+import { Terminal, ChevronRight, Loader2 } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 import { CodingQuestionCard, CodingQuestion } from './CodingQuestionCard';
 import { cn } from './QuestionCard';
 
-export const CodingSection = () => {
-  const [activeQuestionId, setActiveQuestionId] = useState<number>(questionsData[0].id);
+export const CodingSection = ({ course = 'DSA' }: { course?: string }) => {
+  const [questionsData, setQuestionsData] = useState<CodingQuestion[]>([]);
+  const [activeQuestionId, setActiveQuestionId] = useState<number | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  const activeQuestion = questionsData.find(q => q.id === activeQuestionId) as CodingQuestion;
+  useEffect(() => {
+    const fetchChallenges = async () => {
+      const { data, error } = await supabase.from('coding_challenges').select('*').eq('course', course).order('id');
+      if (!error && data && data.length > 0) {
+        setQuestionsData(data);
+        setActiveQuestionId(data[0].id);
+      }
+      setLoading(false);
+    };
+    fetchChallenges();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="w-full h-96 flex items-center justify-center">
+        <Loader2 className="w-8 h-8 animate-spin text-[#e53935]" />
+      </div>
+    );
+  }
+
+  const activeQuestion = questionsData.find(q => q.id === activeQuestionId);
 
   return (
     <section className="w-full max-w-[1800px] mx-auto p-4 md:p-8 mt-6 mb-12 flex flex-col flex-1 h-full">
@@ -58,12 +80,24 @@ export const CodingSection = () => {
                 </button>
               );
             })}
+            
+            {questionsData.length === 0 && (
+              <div className="p-4 text-center text-gray-500 font-bold text-sm">
+                No coding challenges available.
+              </div>
+            )}
           </div>
         </div>
 
         {/* Main Content Area */}
         <div className="flex-1 min-w-0">
-          <CodingQuestionCard key={activeQuestion.id} question={activeQuestion} />
+          {activeQuestion ? (
+            <CodingQuestionCard key={activeQuestion.id} question={activeQuestion} />
+          ) : (
+            <div className="w-full h-full bg-white border-4 border-black rounded-[12px] flex items-center justify-center shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-gray-500 font-black">
+              SELECT A CHALLENGE TO BEGIN
+            </div>
+          )}
         </div>
       </div>
     </section>
